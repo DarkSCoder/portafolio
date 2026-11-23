@@ -3,6 +3,84 @@
     "mtime": 1788585180.9310956,
     "seen": 1795385278.2533782,
     "ast_hash": "85abcbea84c25015632d3ecb90cc265a",
-    "semantic_hash": "85abcbea84c25015632d3ecb90cc265a"
+    "semantic_hash": ""
+  },
+  "build.mjs": {
+    "mtime": 1795406469.0509205,
+    "seen": 1795466917.325814,
+    "ast_hash": "6cc97abfc94a57f81c41bb38fea60068",
+    "semantic_hash": "6cc97abfc94a57f81c41bb38fea60068"
+  },
+  "ink-reveal.js": {
+    "mtime": 1795408572.2980697,
+    "seen": 1795466917.325814,
+    "ast_hash": "e11701f726594bb67114ead9dbf37efd",
+    "semantic_hash": "e11701f726594bb67114ead9dbf37efd"
+  },
+  "privacy.js": {
+    "mtime": 1795407295.3562748,
+    "seen": 1795466917.325814,
+    "ast_hash": "64eb3bc540ff2e3ec784878a48e41b61",
+    "semantic_hash": "64eb3bc540ff2e3ec784878a48e41b61"
+  },
+  "script.js": {
+    "mtime": 1795405462.6589072,
+    "seen": 1795466917.325814,
+    "ast_hash": "70b1531acfc8b59d4edaa61f0d187def",
+    "semantic_hash": "70b1531acfc8b59d4edaa61f0d187def"
+  },
+  ".ai-memory.md": {
+    "mtime": 1795409570.702344,
+    "seen": 1795466917.325814,
+    "ast_hash": "309ffb813ac370b4e9a794741f41e62b",
+    "semantic_hash": "309ffb813ac370b4e9a794741f41e62b"
+  },
+  ".github/copilot-instructions.md": {
+    "mtime": 1795380466.5661259,
+    "seen": 1795466917.325814,
+    "ast_hash": "ec2dc0dc7bef63488889f34de2f5584d",
+    "semantic_hash": "ec2dc0dc7bef63488889f34de2f5584d"
+  },
+  ".github/skills/ai-prompt-engineering-safety-review/SKILL.md": {
+    "mtime": 1795387931.510885,
+    "seen": 1795466917.325814,
+    "ast_hash": "5a1ab48682ca365ee111c5490f3ee5ac",
+    "semantic_hash": "5a1ab48682ca365ee111c5490f3ee5ac"
+  },
+  "index.html": {
+    "mtime": 1795409487.1123054,
+    "seen": 1795466917.325814,
+    "ast_hash": "3093a180122708a5be65f9faca325592",
+    "semantic_hash": "3093a180122708a5be65f9faca325592"
+  },
+  "privacidad.html": {
+    "mtime": 1795406640.7713323,
+    "seen": 1795466917.325814,
+    "ast_hash": "9154872c574bc7f7f887a445b8eb2d00",
+    "semantic_hash": "9154872c574bc7f7f887a445b8eb2d00"
+  },
+  "terminos.html": {
+    "mtime": 1795406456.5747604,
+    "seen": 1795466917.325814,
+    "ast_hash": "79e231d8a76e8503b288b5a2e48523fe",
+    "semantic_hash": "79e231d8a76e8503b288b5a2e48523fe"
+  },
+  "assets/automation-workflow-en.svg": {
+    "mtime": 1795406376.8309658,
+    "seen": 1795466917.325814,
+    "ast_hash": "a80cf3e8cf588a976b37f52b72849a60",
+    "semantic_hash": "a80cf3e8cf588a976b37f52b72849a60"
+  },
+  "assets/automation-workflow-pt.svg": {
+    "mtime": 1795406389.5618622,
+    "seen": 1795466917.325814,
+    "ast_hash": "9259e4c761ae0eac4045448d8e43b631",
+    "semantic_hash": "9259e4c761ae0eac4045448d8e43b631"
+  },
+  "assets/automation-workflow.svg": {
+    "mtime": 1795402937.977101,
+    "seen": 1795466917.325814,
+    "ast_hash": "b93317a7274b5a703f78cb108f3a5f1d",
+    "semantic_hash": "b93317a7274b5a703f78cb108f3a5f1d"
   }
 }

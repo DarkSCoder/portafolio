@@ -90,13 +90,14 @@
       <button
         class="nav-toggle"
         type="button"
-        aria-label="Menú"
-        data-copy="nav.menu"
+        aria-label="Abrir navegación principal"
+        data-copy="nav.menuAria"
         data-copy-attr="aria-label"
         aria-expanded="false"
         aria-controls="navegacion-principal"
       >
         <span class="nav-toggle__icon" aria-hidden="true"></span>
+        <span class="nav-toggle__label" data-copy="nav.menu">Menú</span>
       </button>
 
       <div class="site-language" data-language-switcher>
@@ -114,6 +115,7 @@
             <use href="#site-flag-es"></use>
           </svg>
           <span data-language-current>Español</span>
+        <span class="site-language__current-code" data-language-current-code aria-hidden="true">ES</span>
           <svg class="site-language__chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
             <path d="m3.5 6 4.5 4 4.5-4"/>
           </svg>
@@ -549,72 +551,108 @@
 
           <div class="services__grid">
             <article class="service-card" data-reveal>
-              <p class="service-card__index">01 / 06</p>
+              <p class="service-card__index">01 / 09</p>
               <h3 data-copy="service.software.title" data-service-name>Desarrollo de software y aplicaciones</h3>
               <p data-copy="service.software.description">
                 Soluciones web, móviles y personalizadas, desde la definición del alcance hasta la puesta en marcha.
               </p>
-              <button class="service-card__contact" type="button" data-service-contact="software" disabled>
+              <button class="service-card__contact" type="button" data-service-contact="software">
                 <span data-copy="services.contact">Consultar por WhatsApp</span>
                 <span aria-hidden="true">↗</span>
               </button>
             </article>
 
             <article class="service-card" data-reveal>
-              <p class="service-card__index">02 / 06</p>
+              <p class="service-card__index">02 / 09</p>
               <h3 data-copy="service.automation.title" data-service-name>Automatización e integraciones con n8n</h3>
               <p data-copy="service.automation.description">
                 Conexión de formularios, herramientas, servicios y bases de datos para reducir tareas manuales.
               </p>
-              <button class="service-card__contact" type="button" data-service-contact="automation" disabled>
+              <button class="service-card__contact" type="button" data-service-contact="automation">
                 <span data-copy="services.contact">Consultar por WhatsApp</span>
                 <span aria-hidden="true">↗</span>
               </button>
             </article>
 
             <article class="service-card" data-reveal>
-              <p class="service-card__index">03 / 06</p>
+              <p class="service-card__index">03 / 09</p>
               <h3 data-copy="service.ai.title" data-service-name>Asistentes y agentes de inteligencia artificial</h3>
               <p data-copy="service.ai.description">
                 Diseño de asistentes y flujos con modelos de lenguaje, prompts y agentes para tareas específicas.
               </p>
-              <button class="service-card__contact" type="button" data-service-contact="ai" disabled>
+              <button class="service-card__contact" type="button" data-service-contact="ai">
                 <span data-copy="services.contact">Consultar por WhatsApp</span>
                 <span aria-hidden="true">↗</span>
               </button>
             </article>
 
             <article class="service-card" data-reveal>
-              <p class="service-card__index">04 / 06</p>
+              <p class="service-card__index">04 / 09</p>
               <h3 data-copy="service.data.title" data-service-name>APIs, bases de datos e integración de sistemas</h3>
               <p data-copy="service.data.description">
                 Integración de aplicaciones y diseño de soluciones con PostgreSQL, MySQL y tecnologías web.
               </p>
-              <button class="service-card__contact" type="button" data-service-contact="data" disabled>
+              <button class="service-card__contact" type="button" data-service-contact="data">
                 <span data-copy="services.contact">Consultar por WhatsApp</span>
                 <span aria-hidden="true">↗</span>
               </button>
             </article>
 
             <article class="service-card" data-reveal>
-              <p class="service-card__index">05 / 06</p>
+              <p class="service-card__index">05 / 09</p>
               <h3 data-copy="service.design.title" data-service-name>Diseño UX/UI y contenido digital</h3>
               <p data-copy="service.design.description">
                 Interfaces centradas en las personas, diseño para medios digitales y apoyo a la presencia en línea.
               </p>
-              <button class="service-card__contact" type="button" data-service-contact="design" disabled>
+              <button class="service-card__contact" type="button" data-service-contact="design">
                 <span data-copy="services.contact">Consultar por WhatsApp</span>
                 <span aria-hidden="true">↗</span>
               </button>
             </article>
 
             <article class="service-card" data-reveal>
-              <p class="service-card__index">06 / 06</p>
+              <p class="service-card__index">06 / 09</p>
               <h3 data-copy="service.training.title" data-service-name>Capacitación en programación e inteligencia artificial</h3>
               <p data-copy="service.training.description">
                 Formación práctica para personas y equipos en programación, herramientas de IA y automatización.
               </p>
-              <button class="service-card__contact" type="button" data-service-contact="training" disabled>
+              <button class="service-card__contact" type="button" data-service-contact="training">
+                <span data-copy="services.contact">Consultar por WhatsApp</span>
+                <span aria-hidden="true">↗</span>
+              </button>
+            </article>
+
+            <article class="service-card" data-reveal>
+              <p class="service-card__index">07 / 09</p>
+              <h3 data-copy="service.vision.title" data-service-name>Prototipos de visión por computador</h3>
+              <p data-copy="service.vision.description">
+                Pruebas de concepto para lectura y gestión de imágenes, basadas en experiencia con visión por computador.
+              </p>
+              <button class="service-card__contact" type="button" data-service-contact="vision">
+                <span data-copy="services.contact">Consultar por WhatsApp</span>
+                <span aria-hidden="true">↗</span>
+              </button>
+            </article>
+
+            <article class="service-card" data-reveal>
+              <p class="service-card__index">08 / 09</p>
+              <h3 data-copy="service.consulting.title" data-service-name>Consultoría tecnológica y adopción de IA</h3>
+              <p data-copy="service.consulting.description">
+                Análisis de procesos para detectar oportunidades de automatización y uso práctico de inteligencia artificial.
+              </p>
+              <button class="service-card__contact" type="button" data-service-contact="consulting">
+                <span data-copy="services.contact">Consultar por WhatsApp</span>
+                <span aria-hidden="true">↗</span>
+              </button>
+            </article>
+
+            <article class="service-card" data-reveal>
+              <p class="service-card__index">09 / 09</p>
+              <h3 data-copy="service.community.title" data-service-name>Redes sociales y gestión de comunidades</h3>
+              <p data-copy="service.community.description">
+                Diseño de anuncios, calendarios de publicaciones y acompañamiento de comunidades digitales.
+              </p>
+              <button class="service-card__contact" type="button" data-service-contact="community">
                 <span data-copy="services.contact">Consultar por WhatsApp</span>
                 <span aria-hidden="true">↗</span>
               </button>
@@ -622,22 +660,11 @@
           </div>
 
           <div class="services__agreement">
-            <div class="services__terms">
-              <input id="service-terms" type="checkbox" data-service-terms>
-              <div>
-                <label for="service-terms" data-copy="services.termsAcceptance">
-                  He leído y acepto los términos y la política de privacidad.
-                </label>
-                <p class="services__terms-links">
-                  <span data-copy="services.readLegal">Consulta:</span>
-                  <a href="./terminos.html?lang=es" data-legal-link="terms" data-copy="services.termsLink">Términos y condiciones</a>
-                  <span aria-hidden="true">·</span>
-                  <a href="./privacidad.html?lang=es" data-legal-link="privacy" data-copy="services.privacyLink">Política de privacidad</a>
-                </p>
-              </div>
-            </div>
-            <p class="services__terms-help" data-terms-feedback aria-live="polite" data-copy="services.termsHelp">
-              Marca la casilla para habilitar los botones de WhatsApp.
+            <p class="services__terms-help" data-copy="services.termsPrompt">
+              Al elegir un servicio, verás las condiciones antes de abrir WhatsApp.
+            </p>
+            <p class="services__terms-help" data-contact-status role="status" aria-live="polite" data-copy="services.contactUnavailable" hidden>
+              No se pudo preparar WhatsApp. Inténtalo de nuevo o utiliza el correo electrónico.
             </p>
             <p class="services__note" data-copy="services.noLogos">
               No se muestran logotipos ni marcas de clientes sin autorización.
@@ -667,13 +694,75 @@
               <span class="contact-link__value" data-copy="contact.whatsappAction">Iniciar conversación</span>
               <span class="contact-link__arrow" aria-hidden="true">↗</span>
             </a>
-            <p data-whatsapp-terms-notice data-copy="services.whatsappTermsRequired" role="status" aria-live="polite" hidden>
-              Para continuar a WhatsApp, acepta los términos en la sección Servicios.
-            </p>
           </div>
         </div>
       </section>
     </main>
+
+    <dialog
+      class="terms-dialog"
+      data-terms-dialog
+      aria-labelledby="terms-dialog-title"
+      aria-describedby="terms-dialog-summary"
+    >
+      <div class="terms-dialog__content">
+        <header class="terms-dialog__header">
+          <div>
+            <p class="eyebrow" data-copy="services.termsEyebrow">Antes de contactar</p>
+            <h2 id="terms-dialog-title" data-copy="services.termsTitle">Revisa las condiciones</h2>
+          </div>
+          <button
+            class="terms-dialog__close"
+            type="button"
+            data-terms-close
+            aria-label="Cerrar"
+            data-copy="services.termsClose"
+            data-copy-attr="aria-label"
+          >
+            <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+              <path d="m5 5 10 10M15 5 5 15"/>
+            </svg>
+          </button>
+        </header>
+        <div class="terms-dialog__body">
+        <ul class="terms-dialog__summary" id="terms-dialog-summary">
+          <li data-copy="services.termsPointOne">La consulta no confirma un servicio ni su precio.</li>
+          <li data-copy="services.termsPointTwo">WhatsApp abre un mensaje que tú decides enviar; se aplican sus políticas.</li>
+          <li data-copy="services.termsPointThree">Alcance, precio y plazos se acuerdan por escrito.</li>
+          </ul>
+          <div class="terms-dialog__links">
+            <a href="./terminos.html?lang=es" data-legal-link="terms" target="_blank" rel="noopener noreferrer">
+              <span data-copy="services.termsLink">Términos y condiciones</span>
+              <span class="visually-hidden" data-copy="services.newTab"> (se abre en una pestaña nueva)</span>
+            </a>
+            <a href="./privacidad.html?lang=es" data-legal-link="privacy" target="_blank" rel="noopener noreferrer">
+              <span data-copy="services.privacyLink">Política de privacidad</span>
+              <span class="visually-hidden" data-copy="services.newTab"> (se abre en una pestaña nueva)</span>
+            </a>
+          </div>
+          <p class="terms-dialog__note" id="terms-dialog-note" data-copy="services.termsNote">
+            La aceptación solo dura esta visita; no guardamos prueba y no es un contrato.
+          </p>
+          <div class="terms-dialog__acceptance">
+            <input id="service-terms" type="checkbox" data-service-terms autofocus aria-describedby="terms-dialog-note">
+            <label for="service-terms" data-copy="services.termsAcceptance">
+              Confirmo que leí y acepto los Términos y la Política de privacidad.
+            </label>
+          </div>
+          <p class="terms-dialog__feedback" data-terms-feedback role="status" aria-live="polite" data-copy="services.termsHelp">
+            Marca la casilla para continuar a WhatsApp.
+          </p>
+        </div>
+        <footer class="terms-dialog__actions">
+          <button class="terms-dialog__cancel" type="button" data-terms-close data-copy="services.termsCancel">
+            Ahora no
+          </button>
+          <button class="terms-dialog__continue" type="button" data-terms-continue disabled data-copy="services.termsContinue">
+            Aceptar y abrir WhatsApp
+          </button>
+        </footer>
+      </div>
+    </dialog>
 
     <footer class="site-footer section-wrap">
       <a class="wordmark wordmark--footer" href="#inicio">

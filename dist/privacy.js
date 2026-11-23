@@ -21,6 +21,8 @@
       "language.aria": "Selecciona el idioma del sitio",
       "language.changeAria": "Cambiar idioma",
       "nav.menu": "Menú",
+      "nav.menuAria": "Abrir navegación principal",
+      "nav.closeMenuAria": "Cerrar navegación principal",
       "nav.mainAria": "Navegación principal",
       "nav.profile": "Perfil",
       "nav.experience": "Experiencia",
@@ -164,14 +166,24 @@
       "services.languageAria": "Idioma de los servicios",
       "services.contact": "Consultar por WhatsApp",
       "services.contactAria": "Consultar por WhatsApp sobre",
-      "services.termsAcceptance": "He leído y acepto los términos y la política de privacidad.",
-      "services.readLegal": "Consulta:",
+      "services.termsPrompt": "Al elegir un servicio, verás las condiciones antes de abrir WhatsApp.",
+      "services.termsEyebrow": "Antes de contactar",
+      "services.termsTitle": "Revisa las condiciones",
+      "services.termsClose": "Cerrar el diálogo",
+      "services.termsPointOne": "La consulta no confirma un servicio ni su precio.",
+      "services.termsPointTwo": "WhatsApp abre un mensaje que tú decides enviar; se aplican sus políticas.",
+      "services.termsPointThree": "Alcance, precio y plazos se acuerdan por escrito.",
+      "services.termsAcceptance": "Confirmo que leí y acepto los Términos y la Política de privacidad.",
+      "services.termsNote": "La aceptación solo dura esta visita; no guardamos prueba y no es un contrato.",
       "services.termsLink": "Términos y condiciones",
       "services.privacyLink": "Política de privacidad",
-      "services.termsHelp": "Marca la casilla para habilitar los botones de WhatsApp.",
-      "services.termsAccepted": "Aceptación local; el sitio no almacena un comprobante. Puedes continuar a WhatsApp.",
+      "services.newTab": " (se abre en una pestaña nueva)",
+      "services.termsHelp": "Marca la casilla para continuar a WhatsApp.",
+      "services.termsReady": "Listo. Al continuar, se abrirá WhatsApp con el mensaje preparado.",
+      "services.termsCancel": "Ahora no",
+      "services.termsContinue": "Aceptar y abrir WhatsApp",
+      "services.contactUnavailable": "No se pudo preparar WhatsApp. Inténtalo de nuevo o utiliza el correo electrónico.",
       "services.noLogos": "No se muestran logotipos ni marcas de clientes sin autorización.",
-      "services.whatsappTermsRequired": "Para continuar a WhatsApp, acepta los términos en la sección Servicios.",
       "footer.privacy": "Privacidad",
       "footer.terms": "Términos",
       "legal.backServices": "Volver a servicios",
@@ -189,6 +201,12 @@
       "service.design.description": "Interfaces centradas en las personas, diseño para medios digitales y apoyo a la presencia en línea.",
       "service.training.title": "Capacitación en programación e inteligencia artificial",
       "service.training.description": "Formación práctica para personas y equipos en programación, herramientas de IA y automatización.",
+      "service.vision.title": "Prototipos de visión por computador",
+      "service.vision.description": "Pruebas de concepto para lectura y gestión de imágenes, basadas en experiencia con visión por computador.",
+      "service.consulting.title": "Consultoría tecnológica y adopción de IA",
+      "service.consulting.description": "Análisis de procesos para detectar oportunidades de automatización y uso práctico de inteligencia artificial.",
+      "service.community.title": "Redes sociales y gestión de comunidades",
+      "service.community.description": "Diseño de anuncios, calendarios de publicaciones y acompañamiento de comunidades digitales.",
       "whatsapp.message": "Hola, estoy interesado/a en el servicio de {service}. ¿Podríamos conversar sobre mi proyecto? He leído y acepto los Términos y condiciones.",
       "cookie.title": "Preferencias de cookies",
       "cookie.message": "Google Analytics solo se activa si aceptas. Tu preferencia se guarda en este dispositivo durante 6 meses.",
@@ -215,6 +233,8 @@
       "language.aria": "Select the site language",
       "language.changeAria": "Change language",
       "nav.menu": "Menu",
+      "nav.menuAria": "Open main navigation",
+      "nav.closeMenuAria": "Close main navigation",
       "nav.mainAria": "Main navigation",
       "nav.profile": "Profile",
       "nav.experience": "Experience",
@@ -358,14 +378,24 @@
       "services.languageAria": "Service language",
       "services.contact": "Ask via WhatsApp",
       "services.contactAria": "Ask on WhatsApp about",
-      "services.termsAcceptance": "I have read and accept the Terms and Conditions and Privacy Policy.",
-      "services.readLegal": "Read:",
+      "services.termsPrompt": "Choose a service to review the terms before WhatsApp opens.",
+      "services.termsEyebrow": "Before you contact me",
+      "services.termsTitle": "Review the terms",
+      "services.termsClose": "Close dialog",
+      "services.termsPointOne": "An enquiry does not confirm a service or its price.",
+      "services.termsPointTwo": "WhatsApp opens a message for you to review; its policies apply.",
+      "services.termsPointThree": "Scope, price, and timing are agreed in writing.",
+      "services.termsAcceptance": "I confirm that I have read and accept the Terms and Privacy Policy.",
+      "services.termsNote": "Only for this visit; we store no proof, and it isn't a contract.",
       "services.termsLink": "Terms and Conditions",
       "services.privacyLink": "Privacy Policy",
-      "services.termsHelp": "Check the box to enable the WhatsApp buttons.",
-      "services.termsAccepted": "Acceptance is kept only for this page session; the site does not store proof. You can continue to WhatsApp.",
+      "services.newTab": " (opens in a new tab)",
+      "services.termsHelp": "Check the box to continue to WhatsApp.",
+      "services.termsReady": "Ready. Continue to open WhatsApp with a prepared message.",
+      "services.termsCancel": "Not now",
+      "services.termsContinue": "Accept and open WhatsApp",
+      "services.contactUnavailable": "WhatsApp could not be prepared. Try again or use email instead.",
       "services.noLogos": "Client logos and trademarks are not displayed without permission.",
-      "services.whatsappTermsRequired": "To continue to WhatsApp, accept the terms in the Services section.",
       "footer.privacy": "Privacy",
       "footer.terms": "Terms",
       "legal.backServices": "Back to services",
@@ -383,6 +413,12 @@
       "service.design.description": "Human-centred interfaces, digital media design, and support for an online presence.",
       "service.training.title": "Programming and artificial intelligence training",
       "service.training.description": "Practical training for individuals and teams in programming, AI tools, and automation.",
+      "service.vision.title": "Computer vision prototypes",
+      "service.vision.description": "Proofs of concept for image reading and management, grounded in computer vision project experience.",
+      "service.consulting.title": "Technology consulting and AI adoption",
+      "service.consulting.description": "Review workflows to identify opportunities for automation and practical use of artificial intelligence.",
+      "service.community.title": "Social media and community management",
+      "service.community.description": "Ad design, publishing calendars, and support for digital communities.",
       "whatsapp.message": "Hello, I'm interested in the {service} service. Could we discuss my project? I have read and accept the Terms and Conditions.",
       "cookie.title": "Cookie preferences",
       "cookie.message": "Google Analytics is only enabled if you accept. Your choice is saved on this device for 6 months.",
@@ -409,6 +445,8 @@
       "language.aria": "Selecionar o idioma do site",
       "language.changeAria": "Alterar idioma",
       "nav.menu": "Menu",
+      "nav.menuAria": "Abrir navegação principal",
+      "nav.closeMenuAria": "Fechar navegação principal",
       "nav.mainAria": "Navegação principal",
       "nav.profile": "Perfil",
       "nav.experience": "Experiência",
@@ -552,14 +590,24 @@
       "services.languageAria": "Idioma dos serviços",
       "services.contact": "Falar pelo WhatsApp",
       "services.contactAria": "Falar pelo WhatsApp sobre",
-      "services.termsAcceptance": "Li e aceito os Termos e Condições e a Política de Privacidade.",
-      "services.readLegal": "Leia:",
+      "services.termsPrompt": "Ao escolher um serviço, você verá as condições antes de abrir o WhatsApp.",
+      "services.termsEyebrow": "Antes de entrar em contato",
+      "services.termsTitle": "Revise as condições",
+      "services.termsClose": "Fechar diálogo",
+      "services.termsPointOne": "A consulta não confirma um serviço nem seu preço.",
+      "services.termsPointTwo": "O WhatsApp abre uma mensagem para você revisar; as políticas da plataforma se aplicam.",
+      "services.termsPointThree": "Escopo, preço e prazos são acordados por escrito.",
+      "services.termsAcceptance": "Confirmo que li e aceito os Termos e a Política de Privacidade.",
+      "services.termsNote": "Só nesta visita; não guardamos comprovante e isso não é um contrato.",
       "services.termsLink": "Termos e Condições",
       "services.privacyLink": "Política de Privacidade",
-      "services.termsHelp": "Marque a caixa para ativar os botões do WhatsApp.",
-      "services.termsAccepted": "A aceitação vale apenas nesta sessão; o site não guarda um comprovante. Você pode continuar para o WhatsApp.",
+      "services.newTab": " (abre em uma nova aba)",
+      "services.termsHelp": "Marque a caixa para continuar para o WhatsApp.",
+      "services.termsReady": "Pronto. Ao continuar, o WhatsApp abrirá com uma mensagem preparada.",
+      "services.termsCancel": "Agora não",
+      "services.termsContinue": "Aceitar e abrir o WhatsApp",
+      "services.contactUnavailable": "Não foi possível preparar o WhatsApp. Tente novamente ou use o e-mail.",
       "services.noLogos": "Logotipos e marcas de clientes não são exibidos sem autorização.",
-      "services.whatsappTermsRequired": "Para continuar para o WhatsApp, aceite os termos na seção Serviços.",
       "footer.privacy": "Privacidade",
       "footer.terms": "Termos",
       "legal.backServices": "Voltar aos serviços",
@@ -577,6 +625,12 @@
       "service.design.description": "Interfaces centradas nas pessoas, design para meios digitais e apoio à presença online.",
       "service.training.title": "Capacitação em programação e inteligência artificial",
       "service.training.description": "Formação prática para pessoas e equipes em programação, ferramentas de IA e automação.",
+      "service.vision.title": "Protótipos de visão computacional",
+      "service.vision.description": "Provas de conceito para leitura e gestão de imagens, com base na experiência em visão computacional.",
+      "service.consulting.title": "Consultoria tecnológica e adoção de IA",
+      "service.consulting.description": "Análise de processos para identificar oportunidades de automação e uso prático da inteligência artificial.",
+      "service.community.title": "Redes sociais e gestão de comunidades",
+      "service.community.description": "Criação de anúncios, calendários de publicações e apoio a comunidades digitais.",
       "whatsapp.message": "Olá, tenho interesse no serviço de {service}. Podemos conversar sobre o meu projeto? Li e aceito os Termos e Condições.",
       "cookie.title": "Preferências de cookies",
       "cookie.message": "O Google Analytics só é ativado se você aceitar. Sua escolha fica salva neste dispositivo por 6 meses.",
@@ -594,8 +648,14 @@
   const languageCombobox = document.querySelector("[data-site-language]");
   const languageListbox = document.querySelector("#site-language-options");
   const languageOptions = [...document.querySelectorAll("[data-language-option]")];
+  const languageCurrentCode = document.querySelector("[data-language-current-code]");
   const serviceTerms = document.querySelector("[data-service-terms]");
+  const termsDialog = document.querySelector("[data-terms-dialog]");
+  const termsContinue = document.querySelector("[data-terms-continue]");
+  const termsCloseButtons = document.querySelectorAll("[data-terms-close]");
   const serviceButtons = document.querySelectorAll("[data-service-contact]");
+  const whatsappContact = document.querySelector('[data-protected-contact="whatsapp"]');
+  const contactStatus = document.querySelector("[data-contact-status]");
   const cookieBanner = document.querySelector("[data-cookie-banner]");
   const cookieStatus = document.querySelector("[data-cookie-status]");
   const cookieAccept = document.querySelector("[data-cookie-accept]");
@@ -712,6 +772,15 @@
       element.lang = language;
     });
 
+    const navigationToggle = document.querySelector(".nav-toggle");
+    if (navigationToggle) {
+      const isExpanded = navigationToggle.getAttribute("aria-expanded") === "true";
+      const menuLabel = languageCopy[
+        isExpanded ? "nav.closeMenuAria" : "nav.menuAria"
+      ];
+      if (menuLabel) navigationToggle.setAttribute("aria-label", menuLabel);
+    }
+
     if (serviceSection) serviceSection.lang = language;
     if (languageCombobox) {
       const selectedOption = languageOptions.find(
@@ -723,10 +792,11 @@
       const currentName = languageCombobox.querySelector("[data-language-current]");
       const currentFlag = languageCombobox.querySelector(".site-language__flag use");
 
-      if (!languageName || !currentName || !currentFlag) {
+      if (!languageName || !currentName || !currentFlag || !languageCurrentCode) {
         console.error(`No se pudo actualizar el selector para ${language}.`);
       } else {
         currentName.textContent = languageName;
+        languageCurrentCode.textContent = language.toUpperCase();
         currentFlag.setAttribute("href", `#site-flag-${language}`);
         languageCombobox.setAttribute(
           "aria-label",
@@ -856,31 +926,107 @@
   function updateServiceTermsState() {
     if (!serviceTerms) return;
 
-    serviceButtons.forEach((button) => {
-      button.disabled = !serviceTerms.checked;
-    });
-
     const feedback = document.querySelector("[data-terms-feedback]");
+    if (termsContinue) termsContinue.disabled = !serviceTerms.checked;
     if (feedback) {
-      const key = serviceTerms.checked ? "services.termsAccepted" : "services.termsHelp";
+      const key = serviceTerms.checked ? "services.termsReady" : "services.termsHelp";
       feedback.textContent = copy[activeLanguage][key];
       feedback.lang = activeLanguage;
     }
   }
 
+  let serviceTermsAccepted = false;
+  let pendingServiceKey = null;
+  let termsDialogInvoker = null;
+
+  function announceContactError() {
+    if (!contactStatus) return;
+    contactStatus.hidden = false;
+    contactStatus.textContent = copy[activeLanguage]["services.contactUnavailable"];
+    contactStatus.lang = activeLanguage;
+  }
+
   function getServiceMessage(serviceKey) {
-    const serviceName = document
-      .querySelector(`[data-service-contact="${serviceKey}"]`)
+    const serviceName = [...serviceButtons]
+      .find((button) => button.dataset.serviceContact === serviceKey)
       ?.closest(".service-card")
       ?.querySelector("[data-service-name]")
       ?.textContent.trim();
 
-    if (!serviceName || !serviceTerms?.checked) return null;
+    if (!serviceName) return null;
 
     return copy[activeLanguage]["whatsapp.message"].replace("{service}", serviceName);
   }
 
+  function showTermsDialog(serviceKey, invoker) {
+    if (!serviceTerms || !termsDialog || typeof termsDialog.showModal !== "function") {
+      console.error("El diálogo de términos no está disponible en este navegador.");
+      announceContactError();
+      return;
+    }
+
+    pendingServiceKey = serviceKey;
+    termsDialogInvoker = invoker;
+    serviceTerms.checked = false;
+    updateServiceTermsState();
+    termsDialog.showModal();
+  }
+
+  function requestWhatsApp(serviceKey, invoker) {
+    if (serviceTermsAccepted) {
+      const message = serviceKey ? getServiceMessage(serviceKey) : "";
+      if (serviceKey && !message) {
+        console.error(`No se pudo preparar el mensaje del servicio "${serviceKey}".`);
+        return;
+      }
+
+      if (typeof window.openProtectedWhatsApp !== "function") {
+        console.error("No está disponible la función de contacto protegido de WhatsApp.");
+        announceContactError();
+        return;
+      }
+      window.openProtectedWhatsApp(message || "");
+      return;
+    }
+
+    showTermsDialog(serviceKey, invoker);
+  }
+
   serviceTerms?.addEventListener("change", updateServiceTermsState);
+  termsCloseButtons.forEach((button) => {
+    button.addEventListener("click", () => termsDialog?.close());
+  });
+  termsDialog?.addEventListener("click", (event) => {
+    if (event.target === termsDialog) termsDialog.close();
+  });
+  termsDialog?.addEventListener("close", () => {
+    pendingServiceKey = null;
+    if (termsDialogInvoker?.isConnected) termsDialogInvoker.focus();
+    termsDialogInvoker = null;
+  });
+  termsContinue?.addEventListener("click", () => {
+    if (!serviceTerms?.checked) return;
+
+    const message = pendingServiceKey ? getServiceMessage(pendingServiceKey) : "";
+    if (pendingServiceKey && !message) {
+      console.error(`No se pudo preparar el mensaje del servicio "${pendingServiceKey}".`);
+      return;
+    }
+    if (typeof window.openProtectedWhatsApp !== "function") {
+      const feedback = document.querySelector("[data-terms-feedback]");
+      if (feedback) {
+        feedback.textContent = copy[activeLanguage]["services.contactUnavailable"];
+        feedback.lang = activeLanguage;
+      }
+      console.error("No está disponible la función de contacto protegido de WhatsApp.");
+      return;
+    }
+
+    serviceTermsAccepted = true;
+    termsDialog.close();
+    window.openProtectedWhatsApp(message || "");
+  });
+
   languageCombobox?.addEventListener("click", () => {
     if (languageListOpen) {
       closeLanguageOptions();
@@ -952,19 +1098,13 @@
 
   serviceButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      const serviceKey = button.dataset.serviceContact;
-      if (!serviceKey) return;
-
-      const message = getServiceMessage(serviceKey);
-      if (!message) return;
-
-      if (typeof window.openProtectedWhatsApp !== "function") {
-        console.error("No está disponible la función de contacto protegido de WhatsApp.");
-        return;
-      }
-
-      window.openProtectedWhatsApp(message);
+      requestWhatsApp(button.dataset.serviceContact, button);
     });
+  });
+
+  whatsappContact?.addEventListener("click", (event) => {
+    event.preventDefault();
+    requestWhatsApp(null, whatsappContact);
   });
 
   function showCookieBanner(moveFocus = false) {

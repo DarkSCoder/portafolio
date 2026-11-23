@@ -4,8 +4,6 @@ const primaryNavigation = document.querySelector("#navegacion-principal");
 const parallaxElements = document.querySelectorAll("[data-parallax]");
 const revealElements = document.querySelectorAll("[data-reveal]");
 const protectedContactLinks = document.querySelectorAll("[data-protected-contact]");
-const serviceTerms = document.querySelector("[data-service-terms]");
-const whatsappTermsNotice = document.querySelector("[data-whatsapp-terms-notice]");
 const protectedContacts = {
   email: "bHVjaWFubG9wZXo0OUBnbWFpbC5jb20=",
   whatsapp: "NTM1ODUzMTA5MQ==",
@@ -23,45 +21,34 @@ window.openProtectedWhatsApp = (message = "") => {
 protectedContactLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
     const contactType = link.dataset.protectedContact;
-    if (contactType !== "email" && contactType !== "whatsapp") return;
-
-    if (contactType === "whatsapp" && serviceTerms && !serviceTerms.checked) {
-      event.preventDefault();
-      if (whatsappTermsNotice) whatsappTermsNotice.hidden = false;
-      serviceTerms.focus();
-      return;
-    }
-
-    if (contactType === "whatsapp" && whatsappTermsNotice) {
-      whatsappTermsNotice.hidden = true;
-    }
-
-    if (contactType === "email") {
-      link.href = `mailto:${window.atob(protectedContacts.email)}`;
-      return;
-    }
+    if (contactType !== "email") return;
 
     event.preventDefault();
-    window.openProtectedWhatsApp();
+    link.href = `mailto:${window.atob(protectedContacts.email)}`;
   });
-});
-
-serviceTerms?.addEventListener("change", () => {
-  if (serviceTerms.checked && whatsappTermsNotice) whatsappTermsNotice.hidden = true;
 });
 
 function closeNavigation() {
   if (!navToggle || !primaryNavigation) return;
 
-  navToggle.setAttribute("aria-expanded", "false");
-  primaryNavigation.classList.remove("is-open");
+  setNavigationExpanded(false);
+}
+
+function setNavigationExpanded(expanded) {
+  if (!navToggle || !primaryNavigation) return;
+
+  navToggle.setAttribute("aria-expanded", String(expanded));
+  primaryNavigation.classList.toggle("is-open", expanded);
+  const translation = window.getSiteTranslation?.(
+    expanded ? "nav.closeMenuAria" : "nav.menuAria",
+  );
+  if (translation) navToggle.setAttribute("aria-label", translation);
 }
 
 if (navToggle && primaryNavigation) {
   navToggle.addEventListener("click", () => {
     const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
-    navToggle.setAttribute("aria-expanded", String(!isExpanded));
-    primaryNavigation.classList.toggle("is-open", !isExpanded);
+    setNavigationExpanded(!isExpanded);
   });
 
   primaryNavigation.addEventListener("click", (event) => {
@@ -71,7 +58,22 @@ if (navToggle && primaryNavigation) {
   });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") closeNavigation();
+    if (event.key === "Escape" && !event.defaultPrevented) closeNavigation();
+  });
+
+  document.addEventListener("pointerdown", (event) => {
+    if (
+      navToggle.getAttribute("aria-expanded") === "true" &&
+      event.target instanceof Node &&
+      !primaryNavigation.contains(event.target) &&
+      !navToggle.contains(event.target)
+    ) {
+      closeNavigation();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 900) closeNavigation();
   });
 }
 
