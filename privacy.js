@@ -1,5 +1,5 @@
 (() => {
-  const measurementId = "G-31Q21GYBNN";
+  const measurementId = "G-5QWFS3W7BL";
   const consentKey = "lrp-analytics-consent";
   const consentVersion = 1;
   const preferenceLifetime = 180 * 24 * 60 * 60 * 1000;
@@ -1224,15 +1224,13 @@
       ad_user_data: "denied",
       ad_personalization: "denied",
     });
-    window.gtag("config", measurementId, {
-      cookie_expires: analyticsCookieLifetime,
-      allow_google_signals: false,
-      allow_ad_personalization_signals: false,
-    });
+    window.gtag("set", "cookie_expires", analyticsCookieLifetime);
+    window.gtag("set", "allow_google_signals", false);
+    window.gtag("set", "allow_ad_personalization_signals", false);
 
     const script = document.createElement("script");
     script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+    script.src = `https://www.googletagmanager.com/gtm.js?id=${measurementId}`;
     script.addEventListener("error", () => {
       const error = new Error("No se pudo cargar la etiqueta de Google Analytics.");
       console.error(error);
