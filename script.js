@@ -3,8 +3,52 @@ const navToggle = document.querySelector(".nav-toggle");
 const primaryNavigation = document.querySelector("#navegacion-principal");
 const parallaxElements = document.querySelectorAll("[data-parallax]");
 const revealElements = document.querySelectorAll("[data-reveal]");
+const protectedContactLinks = document.querySelectorAll("[data-protected-contact]");
+const serviceTerms = document.querySelector("[data-service-terms]");
+const whatsappTermsNotice = document.querySelector("[data-whatsapp-terms-notice]");
+const protectedContacts = {
+  email: "bHVjaWFubG9wZXo0OUBnbWFpbC5jb20=",
+  whatsapp: "NTM1ODUzMTA5MQ==",
+};
 
 document.body.classList.add("js-enabled");
+
+window.openProtectedWhatsApp = (message = "") => {
+  const phone = window.atob(protectedContacts.whatsapp);
+  const destination = new URL(`https://wa.me/${phone}`);
+  if (message) destination.searchParams.set("text", message);
+  return window.open(destination.href, "_blank", "noopener,noreferrer");
+};
+
+protectedContactLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const contactType = link.dataset.protectedContact;
+    if (contactType !== "email" && contactType !== "whatsapp") return;
+
+    if (contactType === "whatsapp" && serviceTerms && !serviceTerms.checked) {
+      event.preventDefault();
+      if (whatsappTermsNotice) whatsappTermsNotice.hidden = false;
+      serviceTerms.focus();
+      return;
+    }
+
+    if (contactType === "whatsapp" && whatsappTermsNotice) {
+      whatsappTermsNotice.hidden = true;
+    }
+
+    if (contactType === "email") {
+      link.href = `mailto:${window.atob(protectedContacts.email)}`;
+      return;
+    }
+
+    event.preventDefault();
+    window.openProtectedWhatsApp();
+  });
+});
+
+serviceTerms?.addEventListener("change", () => {
+  if (serviceTerms.checked && whatsappTermsNotice) whatsappTermsNotice.hidden = true;
+});
 
 function closeNavigation() {
   if (!navToggle || !primaryNavigation) return;

@@ -6,12 +6,19 @@ const projectRoot = dirname(fileURLToPath(import.meta.url));
 const outputDirectory = join(projectRoot, "dist");
 const publicFiles = [
   "_headers",
-  "Curriculum Lucian_1.pdf",
   "index.html",
   "ink-reveal.js",
+  "privacy.js",
+  "privacidad.html",
   "script.js",
   "styles.css",
+  "terminos.html",
   "assets/automation-workflow.svg",
+  "assets/automation-workflow-en.svg",
+  "assets/automation-workflow-pt.svg",
+  "assets/automation-workflow-mobile.svg",
+  "assets/automation-workflow-mobile-en.svg",
+  "assets/automation-workflow-mobile-pt.svg",
 ];
 const configuredSiteUrl = process.env.SITE_URL;
 let siteOrigin = "";
@@ -40,16 +47,27 @@ for (const file of publicFiles) {
   await copyFile(join(projectRoot, file), destination);
 }
 
-const indexPath = join(outputDirectory, "index.html");
-let html = await readFile(indexPath, "utf8");
-const siteMetadata = siteOrigin
-  ? `    <link rel="canonical" href="${siteOrigin}/">\n    <meta property="og:url" content="${siteOrigin}/">`
-  : "";
-html = html.replace("    <!-- SITE_URL_METADATA -->", siteMetadata);
-await writeFile(indexPath, html, "utf8");
+const pages = [
+  { file: "index.html", path: "/" },
+  { file: "privacidad.html", path: "/privacidad.html" },
+  { file: "terminos.html", path: "/terminos.html" },
+];
+
+for (const page of pages) {
+  const pagePath = join(outputDirectory, page.file);
+  let html = await readFile(pagePath, "utf8");
+  const pageUrl = siteOrigin ? `${siteOrigin}${page.path}` : "";
+  const siteMetadata = pageUrl
+    ? `    <link rel="canonical" href="${pageUrl}">\n    <meta property="og:url" content="${pageUrl}">`
+    : "";
+  html = html.replace("    <!-- SITE_URL_METADATA -->", siteMetadata);
+  await writeFile(pagePath, html, "utf8");
+}
 
 const sitemap = siteOrigin
-  ? `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${siteOrigin}/</loc></url></urlset>\n`
+  ? `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${pages
+      .map((page) => `<url><loc>${siteOrigin}${page.path}</loc></url>`)
+      .join("")}</urlset>\n`
   : "";
 const sitemapDirective = sitemap ? `Sitemap: ${siteOrigin}/sitemap.xml\n` : "";
 await writeFile(

@@ -37,6 +37,15 @@
     status.hidden = !message;
   }
 
+  function getLocalizedMessage(key, fallback) {
+    if (typeof window.getSiteTranslation === "function") {
+      const message = window.getSiteTranslation(key);
+      if (typeof message === "string") return message;
+    }
+
+    return fallback;
+  }
+
   function readViewportHeight() {
     const height = viewportProbe.getBoundingClientRect().height;
     return height > 0 ? height : window.innerHeight;
@@ -150,9 +159,9 @@
     const radius = maximumRadius * Math.min(1, progress / state.maximum);
     const settle = smooth(0.5, 0.96, progress);
 
-    drawRaggedCircle(radius, time, 0, mixColor("#bc1b30", "#5b0718", settle));
-    drawRaggedCircle(radius * 0.91, time, 13, "#5b0718");
-    drawRaggedCircle(radius * 0.79, time, 29, mixColor("#080910", "#5b0718", settle));
+    drawRaggedCircle(radius, time, 0, mixColor("#26c8c4", "#006d70", settle));
+    drawRaggedCircle(radius * 0.91, time, 13, "#006d70");
+    drawRaggedCircle(radius * 0.79, time, 29, mixColor("#090b0d", "#006d70", settle));
     hasCleared = false;
   }
 
@@ -201,16 +210,20 @@
 
     const scroll = window.scrollY;
     const sp = (scroll - geometry.journeyTop) / viewportHeight;
-    const parallaxProgress = Math.max(0, Math.min(1, sp / 4.65));
+    const scrollScale = 0.5;
+    const parallaxProgress = Math.max(
+      0,
+      Math.min(1, sp / (4.65 * scrollScale)),
+    );
     section.style.setProperty(
       "--ink-background-y",
       `${((0.5 - parallaxProgress) * 64).toFixed(2)}px`,
     );
     const maximum = phoneMode ? 0.82 : 1;
-    const threshold = phoneMode ? 2 : 1.55;
+    const threshold = (phoneMode ? 2 : 1.55) * scrollScale;
     const expansion = phoneMode
-      ? smooth(2.05, 2.65, sp)
-      : smooth(1.9, 2.6, sp);
+      ? smooth(2.05 * scrollScale, 2.65 * scrollScale, sp)
+      : smooth(1.9 * scrollScale, 2.6 * scrollScale, sp);
     const progress =
       sp > threshold ? Math.min(maximum, expansion) : 0;
     const changed = Math.abs(progress - state.progress) > 1e-4;
@@ -300,17 +313,14 @@
 
   function showUnavailable(error) {
     section.classList.add("is-unavailable");
-    setStatus(
-      error instanceof Error
-        ? `La escena no está disponible: ${error.message}`
-        : "La escena no está disponible.",
-    );
+    setStatus(getLocalizedMessage("animation.unavailable", "The scene is temporarily unavailable."));
+    console.error("The scroll-driven scene could not be initialized.", error);
   }
 
   async function prepareScene() {
     if (initialized || destroyed) return;
 
-    setStatus("Preparando la escena…");
+    setStatus(getLocalizedMessage("animation.preparing", "Preparing the scene…"));
     try {
       await Promise.all([
         document.fonts ? document.fonts.ready : Promise.resolve(),

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1400" preserveAspectRatio="xMidYMid slice">
+  <rect width="720" height="1400" fill="#090b0d"/>
+  <path d="M0 1120c132-44 245-25 354 8s235 23 366-18v290H0z" fill="#111819"/>
+  <path d="M0 1320h720" stroke="#222a28" stroke-width="2"/>
+
+  <g fill="none" stroke="#005e63" stroke-linecap="round" stroke-width="14">
+    <path d="M360 345v75"/>
+    <path d="M360 875v60h-155v75"/>
+    <path d="M360 935h155v75"/>
+  </g>
+  <g fill="none" stroke="#26c8c4" stroke-linecap="round" stroke-width="5">
+    <path d="M360 345v75"/>
+    <path d="M360 875v60h-155v75"/>
+    <path d="M360 935h155v75"/>
+  </g>
+
+  <g>
+    <rect x="100" y="120" width="520" height="225" fill="#142322" stroke="#485854" stroke-width="3"/>
+    <path d="M138 166h38v38h-38zM147 176h20m-20 9h20m-20 9h12" fill="none" stroke="#f3ebd7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="192" y="190" fill="#c4ccc4" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="3">INPUT</text>
+    <text x="138" y="260" fill="#f3ebd7" font-family="Segoe UI, Arial, sans-serif" font-size="29" font-weight="600">New contact</text>
+    <text x="138" y="305" fill="#c4ccc4" font-family="Segoe UI, Arial, sans-serif" font-size="14" letter-spacing="2">FORM / WEBHOOK</text>
+  </g>
+
+  <g>
+    <rect x="170" y="420" width="380" height="455" fill="#142322" stroke="#26c8c4" stroke-width="4"/>
+    <text x="360" y="470" fill="#c4ccc4" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="3" text-anchor="middle">ORCHESTRATION</text>
+    <path d="M360 555v30m0 0-48 32m48-32 48 32m-48-2v50m0 0-48 32m48-32 48 32" fill="none" stroke="#26c8c4" stroke-width="5" stroke-linecap="round"/>
+    <g fill="#090b0d" stroke="#f3ebd7" stroke-width="3">
+      <circle cx="360" cy="544" r="16"/>
+      <circle cx="312" cy="617" r="16"/>
+      <circle cx="408" cy="617" r="16"/>
+      <circle cx="360" cy="700" r="16"/>
+      <circle cx="312" cy="782" r="16"/>
+      <circle cx="408" cy="782" r="16"/>
+    </g>
+    <text x="360" y="840" fill="#f3ebd7" font-family="Segoe UI, Arial, sans-serif" font-size="52" font-weight="700" text-anchor="middle">n8n</text>
+  </g>
+
+  <g>
+    <rect x="65" y="1010" width="280" height="300" fill="#142322" stroke="#485854" stroke-width="3"/>
+    <circle cx="105" cy="1070" r="20" fill="none" stroke="#26c8c4" stroke-width="3"/>
+    <path d="M96 1070h18m-9-9v18" stroke="#f3ebd7" stroke-width="3" stroke-linecap="round"/>
+    <text x="138" y="1076" fill="#c4ccc4" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2">APPLIED AI</text>
+    <text x="90" y="1155" fill="#f3ebd7" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="600">Classify</text>
+    <text x="90" y="1190" fill="#f3ebd7" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="600">and respond</text>
+    <text x="90" y="1250" fill="#c4ccc4" font-family="Segoe UI, Arial, sans-serif" font-size="12" letter-spacing="1">ASSISTANTS / LLM</text>
+  </g>
+
+  <g>
+    <rect x="375" y="1010" width="280" height="300" fill="#142322" stroke="#485854" stroke-width="3"/>
+    <ellipse cx="415" cy="1067" rx="20" ry="8" fill="none" stroke="#26c8c4" stroke-width="3"/>
+    <path d="M395 1067v24c0 11 40 11 40 0v-24m-40 12c0 11 40 11 40 0" fill="none" stroke="#f3ebd7" stroke-width="3"/>
+    <text x="448" y="1076" fill="#c4ccc4" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2">DATA</text>
+    <text x="400" y="1155" fill="#f3ebd7" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600">PostgreSQL</text>
+    <text x="400" y="1190" fill="#f3ebd7" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="600">/ CRM</text>
+    <text x="400" y="1250" fill="#c4ccc4" font-family="Segoe UI, Arial, sans-serif" font-size="12" letter-spacing="1">RECORD / NOTIFY</text>
+  </g>
+
+  <g fill="#26c8c4">
+    <circle cx="55" cy="430" r="4"/>
+    <circle cx="665" cy="880" r="4"/>
+    <circle cx="58" cy="1370" r="4"/>
+    <circle cx="662" cy="1370" r="4"/>
+  </g>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <rect width="1600" height="1000" fill="#090b0d"/>
+  <path d="M0 730c233-68 442-37 637 8s365 55 551 3 293-47 412-10v269H0z" fill="#111819"/>
+  <path d="M0 850h1600" stroke="#222a28" stroke-width="2"/>
+
+  <g fill="none" stroke="#006d70" stroke-linecap="round" stroke-width="8">
+    <path d="M420 500h170c58 0 70-128 130-128h82"/>
+    <path d="M420 500h170c58 0 70 128 130 128h82"/>
+    <path d="M830 372h155c72 0 84-120 162-120h42"/>
+    <path d="M830 628h155c72 0 84 120 162 120h42"/>
+  </g>
+  <g fill="none" stroke="#26c8c4" stroke-linecap="round" stroke-width="3">
+    <path d="M420 500h170c58 0 70-128 130-128h82"/>
+    <path d="M420 500h170c58 0 70 128 130 128h82"/>
+    <path d="M830 372h155c72 0 84-120 162-120h42"/>
+    <path d="M830 628h155c72 0 84 120 162 120h42"/>
+  </g>
+
+  <g fill="#090b0d" stroke="#006d70" stroke-width="2">
+    <circle cx="420" cy="500" r="10"/>
+    <circle cx="830" cy="372" r="10"/>
+    <circle cx="830" cy="628" r="10"/>
+    <circle cx="1189" cy="252" r="10"/>
+    <circle cx="1189" cy="748" r="10"/>
+  </g>
+
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <g>
+      <rect x="100" y="406" width="320" height="188" fill="#142322" stroke="#485854" stroke-width="2"/>
+      <path d="M138 462h38v38h-38zM147 472h20m-20 9h20m-20 9h12" fill="none" stroke="#f3ebd7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="198" y="473" fill="#c4ccc4" font-size="16" font-weight="700" letter-spacing="3">ENTRADA</text>
+      <text x="138" y="548" fill="#f3ebd7" font-size="24" font-weight="600">Nuevo contacto</text>
+      <text x="138" y="574" fill="#c4ccc4" font-size="14" letter-spacing="2">FORMULARIO / WEBHOOK</text>
+    </g>
+
+    <g>
+      <rect x="590" y="280" width="240" height="440" fill="#142322" stroke="#26c8c4" stroke-width="3"/>
+      <text x="630" y="336" fill="#c4ccc4" font-size="15" font-weight="700" letter-spacing="3">ORQUESTACIÓN</text>
+      <path d="M710 400v28m-32 19 24 14m40-14-24 14m-8 39v28m-32 19 24 14m40-14-24 14" fill="none" stroke="#26c8c4" stroke-width="5" stroke-linecap="round"/>
+      <g fill="#090b0d" stroke="#f3ebd7" stroke-width="3">
+        <circle cx="710" cy="389" r="16"/>
+        <circle cx="670" cy="452" r="16"/>
+        <circle cx="750" cy="452" r="16"/>
+        <circle cx="710" cy="541" r="16"/>
+        <circle cx="670" cy="604" r="16"/>
+        <circle cx="750" cy="604" r="16"/>
+      </g>
+      <text x="710" y="677" fill="#f3ebd7" font-size="46" font-weight="700" text-anchor="middle">n8n</text>
+    </g>
+
+    <g>
+      <rect x="1189" y="156" width="310" height="192" fill="#142322" stroke="#485854" stroke-width="2"/>
+      <circle cx="1239" cy="218" r="22" fill="none" stroke="#26c8c4" stroke-width="3"/>
+      <path d="M1229 218h20m-10-10v20" stroke="#f3ebd7" stroke-width="3" stroke-linecap="round"/>
+      <text x="1280" y="218" fill="#c4ccc4" font-size="15" font-weight="700" letter-spacing="3">IA APLICADA</text>
+      <text x="1230" y="278" fill="#f3ebd7" font-size="24" font-weight="600">Clasificar y responder</text>
+      <text x="1230" y="314" fill="#c4ccc4" font-size="14" letter-spacing="2">ASISTENTES / LLM</text>
+    </g>
+
+    <g>
+      <rect x="1189" y="652" width="310" height="192" fill="#142322" stroke="#485854" stroke-width="2"/>
+      <ellipse cx="1239" cy="710" rx="22" ry="9" fill="none" stroke="#26c8c4" stroke-width="3"/>
+      <path d="M1217 710v27c0 12 44 12 44 0v-27m-44 13c0 12 44 12 44 0" fill="none" stroke="#f3ebd7" stroke-width="3"/>
+      <text x="1280" y="716" fill="#c4ccc4" font-size="15" font-weight="700" letter-spacing="3">DATOS</text>
+      <text x="1230" y="775" fill="#f3ebd7" font-size="24" font-weight="600">PostgreSQL / CRM</text>
+      <text x="1230" y="811" fill="#c4ccc4" font-size="14" letter-spacing="2">REGISTRO / AVISO</text>
+    </g>
+  </g>
+
+  <g fill="#26c8c4">
+    <circle cx="94" cy="184" r="3"/>
+    <circle cx="502" cy="219" r="3"/>
+    <circle cx="1095" cy="498" r="3"/>
+    <circle cx="1524" cy="512" r="3"/>
+  </g>
+</svg>
