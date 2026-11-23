@@ -28,9 +28,12 @@
   let initialized = false;
   let destroyed = false;
   let hasCleared = true;
-  let phoneMode = false;
+  let phoneMode = isPhone();
   let canvasFailed = false;
   let staticMode = reducedMotionQuery.matches;
+
+  section.classList.toggle("is-static", staticMode);
+  section.classList.toggle("is-phone", phoneMode);
 
   function setStatus(message) {
     status.textContent = message;
@@ -210,7 +213,7 @@
 
     const scroll = window.scrollY;
     const sp = (scroll - geometry.journeyTop) / viewportHeight;
-    const scrollScale = 0.5;
+    const scrollScale = phoneMode ? 0.25 : 0.5;
     const parallaxProgress = Math.max(
       0,
       Math.min(1, sp / (4.65 * scrollScale)),
@@ -261,6 +264,7 @@
     staticMode = nextStaticMode;
     phoneMode = nextPhoneMode;
     section.classList.toggle("is-static", staticMode);
+    section.classList.toggle("is-phone", phoneMode);
     section.classList.toggle("is-css-fallback", phoneMode || canvasFailed);
 
     if (modeChanged && initialized) {
@@ -294,11 +298,10 @@
     if (!initialized || staticMode) return;
 
     try {
-      geometry = measureGeometry();
       const nextPhoneMode = isPhone();
-      if (nextPhoneMode !== phoneMode) {
-        phoneMode = nextPhoneMode;
-      }
+      phoneMode = nextPhoneMode;
+      section.classList.toggle("is-phone", phoneMode);
+      geometry = measureGeometry();
       if (!phoneMode && !context && !canvasFailed) {
         context = canvas.getContext("2d", { alpha: true });
         if (!context) canvasFailed = true;
@@ -332,6 +335,7 @@
       staticMode = reducedMotionQuery.matches;
       phoneMode = isPhone();
       section.classList.toggle("is-static", staticMode);
+      section.classList.toggle("is-phone", phoneMode);
 
       if (staticMode) {
         geometry = null;
