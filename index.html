@@ -6,11 +6,15 @@
     <meta name="theme-color" content="#f3ebd7">
     <meta
       name="description"
-      content="Ingeniero informático, profesor universitario y desarrollador. Portafolio de proyectos, experiencia en software, inteligencia artificial y automatización."
+      content="Ingeniero informático, profesor universitario y desarrollador. Portafolio de proyectos y experiencia en software, inteligencia artificial y automatización."
       data-copy="meta.description"
       data-copy-attr="content"
     >
     <meta name="author" content="Lucian Rodríguez Plasencia">
+    <link rel="icon" href="./favicon.ico" sizes="32x32">
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+    <link rel="manifest" href="./site.webmanifest">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_CU" data-copy="meta.locale" data-copy-attr="content">
@@ -35,25 +39,144 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Lucian Rodríguez Plasencia",
-        "jobTitle": "Ingeniero informático, profesor universitario y desarrollador",
-        "description": "Profesional de ingeniería informática, docencia universitaria, desarrollo de software, inteligencia artificial y automatización.",
-        "alumniOf": {
-          "@type": "CollegeOrUniversity",
-          "name": "Universidad de Pinar del Río"
-        },
-        "sameAs": [
-          "https://www.linkedin.com/in/lucian-rodr%C3%ADguez-plasencia-67bb14185"
-        ],
-        "knowsAbout": [
-          "Ingeniería informática",
-          "Desarrollo de software",
-          "Inteligencia artificial",
-          "Automatización",
-          "Docencia universitaria"
-        ],
-        "knowsLanguage": ["Español", "Inglés", "Portugués"]
+        "@graph": [
+          {
+            "@type": "ProfilePage",
+            "@id": "#profile",
+            "name": "Lucian Rodríguez Plasencia | Ingeniero informático e IA",
+            "inLanguage": "es",
+            "isPartOf": {
+              "@id": "#website"
+            },
+            "mainEntity": {
+              "@id": "#person"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "#website",
+            "name": "Lucian Rodríguez Plasencia",
+            "inLanguage": [
+              "es",
+              "en",
+              "pt"
+            ],
+            "publisher": {
+              "@id": "#person"
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "#person",
+            "name": "Lucian Rodríguez Plasencia",
+            "jobTitle": "Ingeniero informático, profesor universitario y desarrollador",
+            "description": "Profesional de ingeniería informática, docencia universitaria, desarrollo de software, inteligencia artificial y automatización.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "CU"
+            },
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "Universidad de Pinar del Río"
+            },
+            "hasCredential": {
+              "@type": "EducationalOccupationalCredential",
+              "credentialCategory": "degree",
+              "name": "Ingeniería Informática",
+              "recognizedBy": {
+                "@type": "CollegeOrUniversity",
+                "name": "Universidad de Pinar del Río"
+              }
+            },
+            "sameAs": [
+              "https://www.linkedin.com/in/lucian-rodr%C3%ADguez-plasencia-67bb14185"
+            ],
+            "knowsAbout": [
+              "Ingeniería informática",
+              "Desarrollo de software",
+              "Inteligencia artificial",
+              "Automatización",
+              "n8n",
+              "Visión por computador",
+              "Diseño UX/UI",
+              "Docencia universitaria"
+            ],
+            "knowsLanguage": [
+              "es",
+              "en",
+              "pt"
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Servicios digitales",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Desarrollo de software y aplicaciones"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Automatización e integraciones con n8n"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Asistentes y agentes de inteligencia artificial"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "APIs, bases de datos e integración de sistemas"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Diseño UX/UI y contenido digital"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Capacitación en programación e inteligencia artificial"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Prototipos de visión por computador"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Consultoría tecnológica y adopción de IA"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Redes sociales y gestión de comunidades"
+                  }
+                }
+              ]
+            }
+          }
+        ]
       }
     </script>
     <link rel="stylesheet" href="./styles.css">
@@ -181,6 +304,9 @@
           <div class="hero__actions">
             <a class="button button--dark" href="#experiencia">
               <span data-copy="hero.explore">Explorar experiencia</span> <span aria-hidden="true">↓</span>
+            </a>
+            <a class="button button--outline" href="#servicios">
+              <span data-copy="hero.services">Ver servicios</span> <span aria-hidden="true">→</span>
             </a>
           </div>
           <p class="hero__availability" data-copy="hero.availability">Abierto a nuevas oportunidades profesionales</p>
@@ -692,6 +818,11 @@
             <a class="contact-link" href="#contacto" data-protected-contact="whatsapp">
               <span class="contact-link__label" data-copy="contact.whatsapp">WhatsApp</span>
               <span class="contact-link__value" data-copy="contact.whatsappAction">Iniciar conversación</span>
+              <span class="contact-link__arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="contact-link" href="https://www.linkedin.com/in/lucian-rodr%C3%ADguez-plasencia-67bb14185" target="_blank" rel="noopener noreferrer me">
+              <span class="contact-link__label" data-copy="contact.linkedin">LinkedIn</span>
+              <span class="contact-link__value"><span data-copy="contact.linkedinAction">Ver perfil profesional</span><span class="visually-hidden" data-copy="services.newTab"> (se abre en una pestaña nueva)</span></span>
               <span class="contact-link__arrow" aria-hidden="true">↗</span>
             </a>
           </div>

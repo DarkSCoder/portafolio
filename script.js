@@ -23,8 +23,12 @@ protectedContactLinks.forEach((link) => {
     const contactType = link.dataset.protectedContact;
     if (contactType !== "email") return;
 
+    // Decode on demand and open the mail client on the first click; the address
+    // never sits in the initial HTML for static scrapers.
     event.preventDefault();
-    link.href = `mailto:${window.atob(protectedContacts.email)}`;
+    const mailto = `mailto:${window.atob(protectedContacts.email)}`;
+    link.href = mailto;
+    window.location.href = mailto;
   });
 });
 

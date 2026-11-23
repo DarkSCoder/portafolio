@@ -36,6 +36,7 @@
       "hero.titleEnd": "ideas a la vida real.",
       "hero.intro": "Soy Lucian Rodríguez Plasencia, ingeniero informático, profesor universitario y desarrollador. Conecto conocimiento técnico con soluciones útiles para personas, equipos y organizaciones, desde software hasta automatización con IA y n8n.",
       "hero.explore": "Explorar experiencia",
+      "hero.services": "Ver servicios",
       "hero.availability": "Abierto a nuevas oportunidades profesionales",
       "hero.artAria": "Composición tipográfica con el monograma LRP",
       "hero.learn": "APRENDER",
@@ -155,6 +156,8 @@
       "contact.emailAction": "Enviar mensaje",
       "contact.whatsapp": "WhatsApp",
       "contact.whatsappAction": "Iniciar conversación",
+      "contact.linkedin": "LinkedIn",
+      "contact.linkedinAction": "Ver perfil profesional",
       "footer.tagline": "Ingeniería, educación y tecnología con propósito.",
       "footer.aria": "Información legal y cookies",
       "footer.top": "Volver arriba",
@@ -248,6 +251,7 @@
       "hero.titleEnd": "ideas to life.",
       "hero.intro": "I’m Lucian Rodríguez Plasencia, a computer engineer, university lecturer, and developer. I connect technical knowledge with useful solutions for people, teams, and organizations—from software to AI and n8n automation.",
       "hero.explore": "Explore my experience",
+      "hero.services": "See services",
       "hero.availability": "Open to new professional opportunities",
       "hero.artAria": "Typographic composition featuring the LRP monogram",
       "hero.learn": "LEARN",
@@ -367,6 +371,8 @@
       "contact.emailAction": "Send a message",
       "contact.whatsapp": "WhatsApp",
       "contact.whatsappAction": "Start a conversation",
+      "contact.linkedin": "LinkedIn",
+      "contact.linkedinAction": "View professional profile",
       "footer.tagline": "Engineering, education, and technology with purpose.",
       "footer.aria": "Legal information and cookies",
       "footer.top": "Back to top",
@@ -460,6 +466,7 @@
       "hero.titleEnd": "ideias da vida real.",
       "hero.intro": "Sou Lucian Rodríguez Plasencia, engenheiro de computação, professor universitário e desenvolvedor. Conecto conhecimento técnico a soluções úteis para pessoas, equipes e organizações, de software à automação com IA e n8n.",
       "hero.explore": "Explorar experiência",
+      "hero.services": "Ver serviços",
       "hero.availability": "Aberto a novas oportunidades profissionais",
       "hero.artAria": "Composição tipográfica com o monograma LRP",
       "hero.learn": "APRENDER",
@@ -579,6 +586,8 @@
       "contact.emailAction": "Enviar mensagem",
       "contact.whatsapp": "WhatsApp",
       "contact.whatsappAction": "Iniciar conversa",
+      "contact.linkedin": "LinkedIn",
+      "contact.linkedinAction": "Ver perfil profissional",
       "footer.tagline": "Engenharia, educação e tecnologia com propósito.",
       "footer.aria": "Informações legais e cookies",
       "footer.top": "Voltar ao topo",
@@ -664,8 +673,13 @@
   const languageFromUrl = normalizeLanguage(
     new URLSearchParams(window.location.search).get("lang"),
   );
+  // Pre-rendered language routes (/en/, /pt/) declare their language and win over a
+  // stored preference. The root "/" intentionally does not: it is the default entry
+  // point, so a returning visitor's saved choice still applies there.
+  const languageFromPage = normalizeLanguage(document.documentElement.dataset.pageLanguage);
+  const languageRoutes = { es: "./", en: "en/", pt: "pt/" };
   const languageFromStorage = readSavedLanguage();
-  let activeLanguage = languageFromUrl || languageFromStorage || "es";
+  let activeLanguage = languageFromUrl || languageFromPage || languageFromStorage || "es";
   let activeLanguageOption = activeLanguage;
   let languageListOpen = false;
   let analyticsLoaded = false;
@@ -814,10 +828,15 @@
       if (!languageListOpen) activeLanguageOption = language;
     }
 
-    document.querySelectorAll("[data-legal-link]").forEach((link) => {
-      const page = link.dataset.legalLink === "terms" ? "terminos.html" : "privacidad.html";
-      link.href = `./${page}?lang=${language}`;
-    });
+    // Keep each link's own path (the build serves extensionless URLs) and only
+    // swap the language parameter.
+    const setLinkLanguage = (link) => {
+      const url = new URL(link.getAttribute("href"), window.location.href);
+      url.searchParams.set("lang", language);
+      link.href = url.href;
+    };
+
+    document.querySelectorAll("[data-legal-link]").forEach(setLinkLanguage);
 
     document.querySelectorAll("[data-legal-language]").forEach((section) => {
       section.hidden = section.dataset.legalLanguage !== language;
@@ -832,7 +851,23 @@
     });
 
     const cookiePolicyLink = document.querySelector("[data-cookie-policy-link]");
-    if (cookiePolicyLink) cookiePolicyLink.href = `./privacidad.html?lang=${language}`;
+    if (cookiePolicyLink) setLinkLanguage(cookiePolicyLink);
+
+    // Built legal pages: send "back to portfolio" links to the matching language route
+    // (a link inside a language section keeps that section's language).
+    const siteRootPath = document.documentElement.dataset.siteRoot;
+    if (siteRootPath) {
+      document.querySelectorAll("[data-home-link]").forEach((link) => {
+        const linkLanguage =
+          link.closest("[data-legal-language]")?.dataset.legalLanguage || language;
+        const target = new URL(
+          languageRoutes[linkLanguage] || "./",
+          new URL(siteRootPath, window.location.href),
+        );
+        target.hash = new URL(link.getAttribute("href"), window.location.href).hash;
+        link.href = target.href;
+      });
+    }
 
     const workflowImage = document.querySelector("[data-workflow-image]");
     const workflowPortrait = document.querySelector("[data-workflow-portrait]");
@@ -864,6 +899,28 @@
 
     window.getSiteTranslation = (key) => languageCopy[key] || null;
     updateServiceTermsState();
+    syncLanguageRoute(language);
+  }
+
+  // On built portfolio pages, reflect the active language in the address bar
+  // (/ , /en/, /pt/) without reloading, so the URL can be shared or bookmarked.
+  function syncLanguageRoute(language) {
+    const root = document.documentElement;
+    if (root.dataset.i18nRoutes !== "true" || !root.dataset.siteRoot) return;
+
+    try {
+      const siteRoot = new URL(root.dataset.siteRoot, window.location.href);
+      const target = new URL(languageRoutes[language], siteRoot);
+      const current = new URL(window.location.href);
+      current.searchParams.delete("lang");
+      target.search = current.search;
+      target.hash = current.hash;
+      if (target.href !== window.location.href) {
+        window.history.replaceState(window.history.state, "", target.href);
+      }
+    } catch (error) {
+      console.error("No se pudo actualizar la URL del idioma.", error);
+    }
   }
 
   function setActiveLanguageOption(language) {

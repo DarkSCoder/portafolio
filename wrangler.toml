@@ -3,3 +3,13 @@ compatibility_date = "2024-11-19"
 
 [assets]
 directory = "./dist"
+# /privacidad.html is served at /privacidad and /en/index.html at /en/ (redirects normalize the rest).
+html_handling = "auto-trailing-slash"
+# Unknown paths return dist/404.html with a real 404 status (not a soft 200).
+not_found_handling = "404-page"
+
+# Always rebuild dist/ before `wrangler deploy`. Set SITE_URL (e.g. https://example.com)
+# in the shell or in the Cloudflare build settings to emit canonical, hreflang,
+# og:image and sitemap.xml.
+[build]
+command = "node build.mjs"

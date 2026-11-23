@@ -1,0 +1,16 @@
+{
+  "name": "Lucian Rodríguez Plasencia · Portafolio",
+  "short_name": "LRP",
+  "description": "Ingeniero informático, profesor universitario y desarrollador: software, inteligencia artificial y automatización.",
+  "lang": "es",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#f3ebd7",
+  "theme_color": "#f3ebd7",
+  "icons": [
+    { "src": "/assets/icon-192.png?v=1c3d605e3e", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/icon-512.png?v=3d5092aac0", "sizes": "512x512", "type": "image/png" },
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

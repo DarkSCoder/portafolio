@@ -3,32 +3,46 @@
   Referrer-Policy: strict-origin-when-cross-origin
   X-Frame-Options: DENY
   Strict-Transport-Security: max-age=31536000
-  Permissions-Policy: camera=(), geolocation=(), microphone=(), payment=(), usb=()
-  Content-Security-Policy: default-src 'self'; base-uri 'self'; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com; font-src 'self'; form-action 'self'; frame-ancestors 'none'; img-src 'self' https://www.google-analytics.com; object-src 'none'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; upgrade-insecure-requests
+  Cross-Origin-Opener-Policy: same-origin
+  X-Permitted-Cross-Domain-Policies: none
+  Permissions-Policy: accelerometer=(), browsing-topics=(), camera=(), display-capture=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; font-src 'self'; form-action 'self'; frame-ancestors 'none'; img-src 'self' https://*.google-analytics.com https://*.googletagmanager.com; manifest-src 'self'; object-src 'none'; script-src 'self' https://*.googletagmanager.com; style-src 'self'; upgrade-insecure-requests
 
 /
   Cache-Control: public, max-age=0, must-revalidate
 
-/index.html
+/en/
   Cache-Control: public, max-age=0, must-revalidate
 
-/privacidad.html
+/pt/
   Cache-Control: public, max-age=0, must-revalidate
 
-/terminos.html
+/privacidad
+  Cache-Control: public, max-age=0, must-revalidate
+
+/terminos
   Cache-Control: public, max-age=0, must-revalidate
 
 /styles.css
-  Cache-Control: public, max-age=86400, must-revalidate
+  Cache-Control: public, max-age=31536000, immutable
 
 /script.js
-  Cache-Control: public, max-age=86400, must-revalidate
+  Cache-Control: public, max-age=31536000, immutable
 
 /privacy.js
-  Cache-Control: public, max-age=86400, must-revalidate
+  Cache-Control: public, max-age=31536000, immutable
 
 /ink-reveal.js
-  Cache-Control: public, max-age=86400, must-revalidate
+  Cache-Control: public, max-age=31536000, immutable
 
 /assets/*
-  Cache-Control: public, max-age=86400, must-revalidate
+  Cache-Control: public, max-age=31536000, immutable
+
+/favicon.ico
+  Cache-Control: public, max-age=604800
+
+/favicon.svg
+  Cache-Control: public, max-age=604800
+
+/site.webmanifest
+  Cache-Control: public, max-age=86400

@@ -1,16 +1,20 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-i18n-routes="true" data-site-root="/">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f3ebd7">
     <meta
       name="description"
-      content="Ingeniero informático, profesor universitario y desarrollador. Portafolio de proyectos, experiencia en software, inteligencia artificial y automatización."
+      content="Ingeniero informático, profesor universitario y desarrollador. Portafolio de proyectos y experiencia en software, inteligencia artificial y automatización."
       data-copy="meta.description"
       data-copy-attr="content"
     >
     <meta name="author" content="Lucian Rodríguez Plasencia">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=780e256179">
+    <link rel="manifest" href="/site.webmanifest">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_CU" data-copy="meta.locale" data-copy-attr="content">
@@ -18,16 +22,17 @@
     <meta property="og:title" content="Lucian Rodríguez Plasencia | Ingeniero informático e IA" data-copy="meta.title" data-copy-attr="content">
     <meta
       property="og:description"
-      content="Ingeniero informático, profesor universitario y desarrollador. Portafolio de proyectos, experiencia en software, inteligencia artificial y automatización."
+      content="Ingeniero informático, profesor universitario y desarrollador. Portafolio de proyectos y experiencia en software, inteligencia artificial y automatización."
       data-copy="meta.description"
       data-copy-attr="content"
     >
-
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="pt_BR">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Lucian Rodríguez Plasencia | Ingeniero informático e IA" data-copy="meta.title" data-copy-attr="content">
     <meta
       name="twitter:description"
-      content="Ingeniero informático, profesor universitario y desarrollador. Portafolio de proyectos, experiencia en software, inteligencia artificial y automatización."
+      content="Ingeniero informático, profesor universitario y desarrollador. Portafolio de proyectos y experiencia en software, inteligencia artificial y automatización."
       data-copy="meta.description"
       data-copy-attr="content"
     >
@@ -35,31 +40,151 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Lucian Rodríguez Plasencia",
-        "jobTitle": "Ingeniero informático, profesor universitario y desarrollador",
-        "description": "Profesional de ingeniería informática, docencia universitaria, desarrollo de software, inteligencia artificial y automatización.",
-        "alumniOf": {
-          "@type": "CollegeOrUniversity",
-          "name": "Universidad de Pinar del Río"
-        },
-        "sameAs": [
-          "https://www.linkedin.com/in/lucian-rodr%C3%ADguez-plasencia-67bb14185"
-        ],
-        "knowsAbout": [
-          "Ingeniería informática",
-          "Desarrollo de software",
-          "Inteligencia artificial",
-          "Automatización",
-          "Docencia universitaria"
-        ],
-        "knowsLanguage": ["Español", "Inglés", "Portugués"]
+        "@graph": [
+          {
+            "@type": "ProfilePage",
+            "@id": "#profile",
+            "name": "Lucian Rodríguez Plasencia | Ingeniero informático e IA",
+            "inLanguage": "es",
+            "isPartOf": {
+              "@id": "#website"
+            },
+            "mainEntity": {
+              "@id": "#person"
+            },
+            "description": "Ingeniero informático, profesor universitario y desarrollador. Portafolio de proyectos y experiencia en software, inteligencia artificial y automatización."
+          },
+          {
+            "@type": "WebSite",
+            "@id": "#website",
+            "name": "Lucian Rodríguez Plasencia",
+            "inLanguage": [
+              "es",
+              "en",
+              "pt"
+            ],
+            "publisher": {
+              "@id": "#person"
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "#person",
+            "name": "Lucian Rodríguez Plasencia",
+            "jobTitle": "Ingeniero informático, profesor universitario y desarrollador",
+            "description": "Profesional de ingeniería informática, docencia universitaria, desarrollo de software, inteligencia artificial y automatización.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "CU"
+            },
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "Universidad de Pinar del Río"
+            },
+            "hasCredential": {
+              "@type": "EducationalOccupationalCredential",
+              "credentialCategory": "degree",
+              "name": "Ingeniería Informática",
+              "recognizedBy": {
+                "@type": "CollegeOrUniversity",
+                "name": "Universidad de Pinar del Río"
+              }
+            },
+            "sameAs": [
+              "https://www.linkedin.com/in/lucian-rodr%C3%ADguez-plasencia-67bb14185"
+            ],
+            "knowsAbout": [
+              "Ingeniería informática",
+              "Desarrollo de software",
+              "Inteligencia artificial",
+              "Automatización",
+              "n8n",
+              "Visión por computador",
+              "Diseño UX/UI",
+              "Docencia universitaria"
+            ],
+            "knowsLanguage": [
+              "es",
+              "en",
+              "pt"
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Servicios digitales",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Desarrollo de software y aplicaciones"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Automatización e integraciones con n8n"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Asistentes y agentes de inteligencia artificial"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "APIs, bases de datos e integración de sistemas"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Diseño UX/UI y contenido digital"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Capacitación en programación e inteligencia artificial"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Prototipos de visión por computador"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Consultoría tecnológica y adopción de IA"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Redes sociales y gestión de comunidades"
+                  }
+                }
+              ]
+            }
+          }
+        ]
       }
     </script>
-    <link rel="stylesheet" href="./styles.css">
-    <script src="./script.js" defer></script>
-    <script src="./privacy.js" defer></script>
-    <script src="./ink-reveal.js" defer></script>
+    <link rel="stylesheet" href="/styles.css?v=fed8ac573c">
+    <script src="/script.js?v=ee3946bbcb" defer></script>
+    <script src="/privacy.js?v=7ea4b0bf4a" defer></script>
+    <script src="/ink-reveal.js?v=1d0d38b810" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#contenido" data-copy="a11y.skip">Saltar al contenido</a>
@@ -105,7 +230,7 @@
           class="site-language__trigger"
           type="button"
           role="combobox"
-          aria-label="Idioma del sitio: Español"
+          aria-label="Selecciona el idioma del sitio: Español"
           aria-haspopup="listbox"
           aria-expanded="false"
           aria-controls="site-language-options"
@@ -173,14 +298,13 @@
         <div class="hero__copy" data-reveal>
           <p class="eyebrow"><span class="eyebrow__mark" aria-hidden="true"></span><span data-copy="hero.eyebrow">Ingeniería · Educación · Inteligencia artificial</span></p>
           <h1 id="hero-title"><span data-copy="hero.titleStart">Tecnología que</span> <em data-copy="hero.titleEm">acerca</em> <span data-copy="hero.titleEnd">ideas a la vida real.</span></h1>
-          <p class="hero__intro" data-copy="hero.intro">
-            Soy Lucian Rodríguez Plasencia, ingeniero informático, profesor universitario
-            y desarrollador. Conecto conocimiento técnico con soluciones útiles para
-            personas, equipos y organizaciones, desde software hasta automatización con IA y n8n.
-          </p>
+          <p class="hero__intro" data-copy="hero.intro">Soy Lucian Rodríguez Plasencia, ingeniero informático, profesor universitario y desarrollador. Conecto conocimiento técnico con soluciones útiles para personas, equipos y organizaciones, desde software hasta automatización con IA y n8n.</p>
           <div class="hero__actions">
             <a class="button button--dark" href="#experiencia">
               <span data-copy="hero.explore">Explorar experiencia</span> <span aria-hidden="true">↓</span>
+            </a>
+            <a class="button button--outline" href="#servicios">
+              <span data-copy="hero.services">Ver servicios</span> <span aria-hidden="true">→</span>
             </a>
           </div>
           <p class="hero__availability" data-copy="hero.availability">Abierto a nuevas oportunidades profesionales</p>
@@ -230,19 +354,19 @@
           <picture>
             <source
               media="(orientation: portrait)"
-              srcset="./assets/automation-workflow-mobile.svg"
+              srcset="/assets/automation-workflow-mobile.svg?v=d2b94ab1e5"
               data-workflow-portrait
-              data-src-es="./assets/automation-workflow-mobile.svg"
-              data-src-en="./assets/automation-workflow-mobile-en.svg"
-              data-src-pt="./assets/automation-workflow-mobile-pt.svg"
+              data-src-es="/assets/automation-workflow-mobile.svg?v=d2b94ab1e5"
+              data-src-en="/assets/automation-workflow-mobile-en.svg?v=6223a5af96"
+              data-src-pt="/assets/automation-workflow-mobile-pt.svg?v=54cbe3d04e"
             >
             <img
               class="ink-story__background"
-              src="./assets/automation-workflow.svg"
+              src="/assets/automation-workflow.svg?v=3534f679db"
               data-workflow-image
-              data-src-es="./assets/automation-workflow.svg"
-              data-src-en="./assets/automation-workflow-en.svg"
-              data-src-pt="./assets/automation-workflow-pt.svg"
+              data-src-es="/assets/automation-workflow.svg?v=3534f679db"
+              data-src-en="/assets/automation-workflow-en.svg?v=77de66a209"
+              data-src-pt="/assets/automation-workflow-pt.svg?v=f2028bcd3c"
               width="1600"
               height="1000"
               alt="Flujo de automatización: entrada de contacto, orquestación con n8n, clasificación por inteligencia artificial y registro en PostgreSQL o CRM."
@@ -264,9 +388,7 @@
             <span data-copy="animation.titleTwo">INFORMÁTICO</span>
             <span data-copy="animation.titleThree">IA + n8n</span>
           </h2>
-          <p class="ink-story__status" data-ink-status data-copy="animation.preparing" role="status" aria-live="polite">
-            Preparando la escena…
-          </p>
+          <p class="ink-story__status" data-ink-status data-copy="animation.preparing" role="status" aria-live="polite">Preparando la escena…</p>
         </div>
         <div class="ink-story__journey" data-ink-journey aria-hidden="true"></div>
       </section>
@@ -288,16 +410,8 @@
           <p class="eyebrow" data-copy="profile.eyebrow">Una mirada práctica, una curiosidad constante</p>
           <h2 id="profile-title"><span data-copy="profile.titleStart">La mejor tecnología empieza por</span> <em data-copy="profile.titleEm">escuchar.</em></h2>
           <div class="profile__text">
-            <p data-copy="profile.paragraphOne">
-              Me motivan el aprendizaje y los retos. Mi formación en ingeniería y mi
-              experiencia en el aula, el desarrollo y la capacitación me permiten
-              traducir ideas complejas en soluciones claras y aplicables.
-            </p>
-            <p data-copy="profile.paragraphTwo">
-              Disfruto trabajar en equipo y construir buenas relaciones. Me describo
-              como una persona responsable, lógica, puntual y empática, con interés
-              por aprender de todo tipo de temas.
-            </p>
+            <p data-copy="profile.paragraphOne">Me motivan el aprendizaje y los retos. Mi formación en ingeniería y mi experiencia en el aula, el desarrollo y la capacitación me permiten traducir ideas complejas en soluciones claras y aplicables.</p>
+            <p data-copy="profile.paragraphTwo">Disfruto trabajar en equipo y construir buenas relaciones. Me describo como una persona responsable, lógica, puntual y empática, con interés por aprender de todo tipo de temas.</p>
           </div>
           <div class="profile__facts">
             <div>
@@ -338,10 +452,7 @@
                 <span class="timeline-item__type" data-copy="experience.freelanceDeveloper">Desarrollador freelance</span>
               </div>
               <p class="timeline-item__company" data-copy="experience.aptik">Aptik · Empresa de software e inteligencia artificial</p>
-              <p data-copy="experience.softwareDescription">
-                Desarrollo de soluciones tecnológicas a la medida, utilizando tecnologías
-                actuales para apoyar la eficiencia, la escalabilidad y la innovación.
-              </p>
+              <p data-copy="experience.softwareDescription">Desarrollo de soluciones tecnológicas a la medida, utilizando tecnologías actuales para apoyar la eficiencia, la escalabilidad y la innovación.</p>
             </div>
             <span class="timeline-item__index" aria-hidden="true">01</span>
           </article>
@@ -354,10 +465,7 @@
                 <span class="timeline-item__type" data-copy="experience.higherEducation">Educación superior</span>
               </div>
               <p class="timeline-item__company" data-copy="experience.university">Universidad de Pinar del Río</p>
-              <p data-copy="experience.professorDescription">
-                Docencia en Introducción a la Programación, Estructuras de Datos,
-                Bases de Datos, Inteligencia Artificial y Diseño UX/UI.
-              </p>
+              <p data-copy="experience.professorDescription">Docencia en Introducción a la Programación, Estructuras de Datos, Bases de Datos, Inteligencia Artificial y Diseño UX/UI.</p>
             </div>
             <span class="timeline-item__index" aria-hidden="true">02</span>
           </article>
@@ -369,11 +477,7 @@
                 <h3 data-copy="experience.trainerTitle">Formador en tecnologías e IA</h3>
                 <span class="timeline-item__type" data-copy="experience.corporateTraining">Capacitación corporativa</span>
               </div>
-              <p data-copy="experience.trainerDescription">
-                Capacito equipos en el uso práctico de herramientas de IA, automatización
-                de tareas repetitivas e identificación de soluciones tecnológicas para
-                sus flujos de trabajo. He impartido formación en instituciones nacionales.
-              </p>
+              <p data-copy="experience.trainerDescription">Capacito equipos en el uso práctico de herramientas de IA, automatización de tareas repetitivas e identificación de soluciones tecnológicas para sus flujos de trabajo. He impartido formación en instituciones nacionales.</p>
             </div>
             <span class="timeline-item__index" aria-hidden="true">03</span>
           </article>
@@ -386,11 +490,7 @@
                 <span class="timeline-item__type" data-copy="experience.freelance">Freelance</span>
               </div>
               <p class="timeline-item__company">Beelight</p>
-              <p data-copy="experience.marketingDescription">
-                Diseño de anuncios y gestión de redes sociales; creación de calendarios
-                de publicaciones, soporte técnico, programación web y Android,
-                atención al cliente y gestión de comunidades.
-              </p>
+              <p data-copy="experience.marketingDescription">Diseño de anuncios y gestión de redes sociales; creación de calendarios de publicaciones, soporte técnico, programación web y Android, atención al cliente y gestión de comunidades.</p>
             </div>
             <span class="timeline-item__index" aria-hidden="true">04</span>
           </article>
@@ -425,10 +525,7 @@
               </div>
               <div class="work-feature__copy">
                 <h3 data-copy="work.meterTitle">Gestión de medidores de agua mediante visión por computador</h3>
-                <p data-copy="work.meterDescription">
-                  Proyecto de graduación que aplica visión por computador a un problema
-                  de gestión y lectura de medidores.
-                </p>
+                <p data-copy="work.meterDescription">Proyecto de graduación que aplica visión por computador a un problema de gestión y lectura de medidores.</p>
               </div>
             </article>
 
@@ -446,11 +543,7 @@
               </div>
               <div class="work-feature__copy">
                 <h3 data-copy="work.marineTitle">Vida marina, tortugas y microplásticos</h3>
-                <p data-copy="work.marineDescription">
-                  Investigación durante 17 años sobre vida marina, tortugas y
-                  microplásticos en la arena costera de la reserva protegida
-                  Guanahacabibes.
-                </p>
+                <p data-copy="work.marineDescription">Investigación durante 17 años sobre vida marina, tortugas y microplásticos en la arena costera de la reserva protegida Guanahacabibes.</p>
               </div>
             </article>
           </div>
@@ -542,10 +635,7 @@
             <div class="services__intro">
               <p class="eyebrow" data-copy="services.eyebrow">Del conocimiento a soluciones concretas</p>
               <h2 id="services-title" data-copy="services.title">Servicios digitales para resolver problemas reales.</h2>
-              <p data-copy="services.intro">
-                Desarrollo, automatización, inteligencia artificial y capacitación, con propuestas
-                ajustadas a las necesidades de cada proyecto.
-              </p>
+              <p data-copy="services.intro">Desarrollo, automatización, inteligencia artificial y capacitación, con propuestas ajustadas a las necesidades de cada proyecto.</p>
             </div>
           </div>
 
@@ -553,9 +643,7 @@
             <article class="service-card" data-reveal>
               <p class="service-card__index">01 / 09</p>
               <h3 data-copy="service.software.title" data-service-name>Desarrollo de software y aplicaciones</h3>
-              <p data-copy="service.software.description">
-                Soluciones web, móviles y personalizadas, desde la definición del alcance hasta la puesta en marcha.
-              </p>
+              <p data-copy="service.software.description">Soluciones web, móviles y personalizadas, desde la definición del alcance hasta la puesta en marcha.</p>
               <button class="service-card__contact" type="button" data-service-contact="software">
                 <span data-copy="services.contact">Consultar por WhatsApp</span>
                 <span aria-hidden="true">↗</span>
@@ -565,9 +653,7 @@
             <article class="service-card" data-reveal>
               <p class="service-card__index">02 / 09</p>
               <h3 data-copy="service.automation.title" data-service-name>Automatización e integraciones con n8n</h3>
-              <p data-copy="service.automation.description">
-                Conexión de formularios, herramientas, servicios y bases de datos para reducir tareas manuales.
-              </p>
+              <p data-copy="service.automation.description">Conexión de formularios, herramientas, servicios y bases de datos para reducir tareas manuales.</p>
               <button class="service-card__contact" type="button" data-service-contact="automation">
                 <span data-copy="services.contact">Consultar por WhatsApp</span>
                 <span aria-hidden="true">↗</span>
@@ -577,9 +663,7 @@
             <article class="service-card" data-reveal>
               <p class="service-card__index">03 / 09</p>
               <h3 data-copy="service.ai.title" data-service-name>Asistentes y agentes de inteligencia artificial</h3>
-              <p data-copy="service.ai.description">
-                Diseño de asistentes y flujos con modelos de lenguaje, prompts y agentes para tareas específicas.
-              </p>
+              <p data-copy="service.ai.description">Diseño de asistentes y flujos con modelos de lenguaje, prompts y agentes para tareas específicas.</p>
               <button class="service-card__contact" type="button" data-service-contact="ai">
                 <span data-copy="services.contact">Consultar por WhatsApp</span>
                 <span aria-hidden="true">↗</span>
@@ -589,9 +673,7 @@
             <article class="service-card" data-reveal>
               <p class="service-card__index">04 / 09</p>
               <h3 data-copy="service.data.title" data-service-name>APIs, bases de datos e integración de sistemas</h3>
-              <p data-copy="service.data.description">
-                Integración de aplicaciones y diseño de soluciones con PostgreSQL, MySQL y tecnologías web.
-              </p>
+              <p data-copy="service.data.description">Integración de aplicaciones y diseño de soluciones con PostgreSQL, MySQL y tecnologías web.</p>
               <button class="service-card__contact" type="button" data-service-contact="data">
                 <span data-copy="services.contact">Consultar por WhatsApp</span>
                 <span aria-hidden="true">↗</span>
@@ -601,9 +683,7 @@
             <article class="service-card" data-reveal>
               <p class="service-card__index">05 / 09</p>
               <h3 data-copy="service.design.title" data-service-name>Diseño UX/UI y contenido digital</h3>
-              <p data-copy="service.design.description">
-                Interfaces centradas en las personas, diseño para medios digitales y apoyo a la presencia en línea.
-              </p>
+              <p data-copy="service.design.description">Interfaces centradas en las personas, diseño para medios digitales y apoyo a la presencia en línea.</p>
               <button class="service-card__contact" type="button" data-service-contact="design">
                 <span data-copy="services.contact">Consultar por WhatsApp</span>
                 <span aria-hidden="true">↗</span>
@@ -613,9 +693,7 @@
             <article class="service-card" data-reveal>
               <p class="service-card__index">06 / 09</p>
               <h3 data-copy="service.training.title" data-service-name>Capacitación en programación e inteligencia artificial</h3>
-              <p data-copy="service.training.description">
-                Formación práctica para personas y equipos en programación, herramientas de IA y automatización.
-              </p>
+              <p data-copy="service.training.description">Formación práctica para personas y equipos en programación, herramientas de IA y automatización.</p>
               <button class="service-card__contact" type="button" data-service-contact="training">
                 <span data-copy="services.contact">Consultar por WhatsApp</span>
                 <span aria-hidden="true">↗</span>
@@ -625,9 +703,7 @@
             <article class="service-card" data-reveal>
               <p class="service-card__index">07 / 09</p>
               <h3 data-copy="service.vision.title" data-service-name>Prototipos de visión por computador</h3>
-              <p data-copy="service.vision.description">
-                Pruebas de concepto para lectura y gestión de imágenes, basadas en experiencia con visión por computador.
-              </p>
+              <p data-copy="service.vision.description">Pruebas de concepto para lectura y gestión de imágenes, basadas en experiencia con visión por computador.</p>
               <button class="service-card__contact" type="button" data-service-contact="vision">
                 <span data-copy="services.contact">Consultar por WhatsApp</span>
                 <span aria-hidden="true">↗</span>
@@ -637,9 +713,7 @@
             <article class="service-card" data-reveal>
               <p class="service-card__index">08 / 09</p>
               <h3 data-copy="service.consulting.title" data-service-name>Consultoría tecnológica y adopción de IA</h3>
-              <p data-copy="service.consulting.description">
-                Análisis de procesos para detectar oportunidades de automatización y uso práctico de inteligencia artificial.
-              </p>
+              <p data-copy="service.consulting.description">Análisis de procesos para detectar oportunidades de automatización y uso práctico de inteligencia artificial.</p>
               <button class="service-card__contact" type="button" data-service-contact="consulting">
                 <span data-copy="services.contact">Consultar por WhatsApp</span>
                 <span aria-hidden="true">↗</span>
@@ -649,9 +723,7 @@
             <article class="service-card" data-reveal>
               <p class="service-card__index">09 / 09</p>
               <h3 data-copy="service.community.title" data-service-name>Redes sociales y gestión de comunidades</h3>
-              <p data-copy="service.community.description">
-                Diseño de anuncios, calendarios de publicaciones y acompañamiento de comunidades digitales.
-              </p>
+              <p data-copy="service.community.description">Diseño de anuncios, calendarios de publicaciones y acompañamiento de comunidades digitales.</p>
               <button class="service-card__contact" type="button" data-service-contact="community">
                 <span data-copy="services.contact">Consultar por WhatsApp</span>
                 <span aria-hidden="true">↗</span>
@@ -660,15 +732,9 @@
           </div>
 
           <div class="services__agreement">
-            <p class="services__terms-help" data-copy="services.termsPrompt">
-              Al elegir un servicio, verás las condiciones antes de abrir WhatsApp.
-            </p>
-            <p class="services__terms-help" data-contact-status role="status" aria-live="polite" data-copy="services.contactUnavailable" hidden>
-              No se pudo preparar WhatsApp. Inténtalo de nuevo o utiliza el correo electrónico.
-            </p>
-            <p class="services__note" data-copy="services.noLogos">
-              No se muestran logotipos ni marcas de clientes sin autorización.
-            </p>
+            <p class="services__terms-help" data-copy="services.termsPrompt">Al elegir un servicio, verás las condiciones antes de abrir WhatsApp.</p>
+            <p class="services__terms-help" data-contact-status role="status" aria-live="polite" data-copy="services.contactUnavailable" hidden>No se pudo preparar WhatsApp. Inténtalo de nuevo o utiliza el correo electrónico.</p>
+            <p class="services__note" data-copy="services.noLogos">No se muestran logotipos ni marcas de clientes sin autorización.</p>
           </div>
         </div>
       </section>
@@ -678,10 +744,7 @@
           <div class="contact__copy">
             <p class="eyebrow" data-copy="contact.eyebrow">¿Hablamos?</p>
             <h2 id="contact-title"><span data-copy="contact.titleStart">Construyamos algo</span><br><em data-copy="contact.titleEm">que importe.</em></h2>
-            <p data-copy="contact.intro">
-              Si buscas un perfil que combine desarrollo, docencia y adopción práctica
-              de IA, me encantará conversar.
-            </p>
+            <p data-copy="contact.intro">Si buscas un perfil que combine desarrollo, docencia y adopción práctica de IA, me encantará conversar.</p>
           </div>
           <div class="contact__links">
             <a class="contact-link" href="#contacto" data-protected-contact="email">
@@ -692,6 +755,11 @@
             <a class="contact-link" href="#contacto" data-protected-contact="whatsapp">
               <span class="contact-link__label" data-copy="contact.whatsapp">WhatsApp</span>
               <span class="contact-link__value" data-copy="contact.whatsappAction">Iniciar conversación</span>
+              <span class="contact-link__arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="contact-link" href="https://www.linkedin.com/in/lucian-rodr%C3%ADguez-plasencia-67bb14185" target="_blank" rel="noopener noreferrer me">
+              <span class="contact-link__label" data-copy="contact.linkedin">LinkedIn</span>
+              <span class="contact-link__value"><span data-copy="contact.linkedinAction">Ver perfil profesional</span><span class="visually-hidden" data-copy="services.newTab"> (se abre en una pestaña nueva)</span></span>
               <span class="contact-link__arrow" aria-hidden="true">↗</span>
             </a>
           </div>
@@ -715,7 +783,7 @@
             class="terms-dialog__close"
             type="button"
             data-terms-close
-            aria-label="Cerrar"
+            aria-label="Cerrar el diálogo"
             data-copy="services.termsClose"
             data-copy-attr="aria-label"
           >
@@ -731,35 +799,25 @@
           <li data-copy="services.termsPointThree">Alcance, precio y plazos se acuerdan por escrito.</li>
           </ul>
           <div class="terms-dialog__links">
-            <a href="./terminos.html?lang=es" data-legal-link="terms" target="_blank" rel="noopener noreferrer">
+            <a href="/terminos?lang=es" data-legal-link="terms" target="_blank" rel="noopener noreferrer">
               <span data-copy="services.termsLink">Términos y condiciones</span>
               <span class="visually-hidden" data-copy="services.newTab"> (se abre en una pestaña nueva)</span>
             </a>
-            <a href="./privacidad.html?lang=es" data-legal-link="privacy" target="_blank" rel="noopener noreferrer">
+            <a href="/privacidad?lang=es" data-legal-link="privacy" target="_blank" rel="noopener noreferrer">
               <span data-copy="services.privacyLink">Política de privacidad</span>
               <span class="visually-hidden" data-copy="services.newTab"> (se abre en una pestaña nueva)</span>
             </a>
           </div>
-          <p class="terms-dialog__note" id="terms-dialog-note" data-copy="services.termsNote">
-            La aceptación solo dura esta visita; no guardamos prueba y no es un contrato.
-          </p>
+          <p class="terms-dialog__note" id="terms-dialog-note" data-copy="services.termsNote">La aceptación solo dura esta visita; no guardamos prueba y no es un contrato.</p>
           <div class="terms-dialog__acceptance">
             <input id="service-terms" type="checkbox" data-service-terms autofocus aria-describedby="terms-dialog-note">
-            <label for="service-terms" data-copy="services.termsAcceptance">
-              Confirmo que leí y acepto los Términos y la Política de privacidad.
-            </label>
+            <label for="service-terms" data-copy="services.termsAcceptance">Confirmo que leí y acepto los Términos y la Política de privacidad.</label>
           </div>
-          <p class="terms-dialog__feedback" data-terms-feedback role="status" aria-live="polite" data-copy="services.termsHelp">
-            Marca la casilla para continuar a WhatsApp.
-          </p>
+          <p class="terms-dialog__feedback" data-terms-feedback role="status" aria-live="polite" data-copy="services.termsHelp">Marca la casilla para continuar a WhatsApp.</p>
         </div>
         <footer class="terms-dialog__actions">
-          <button class="terms-dialog__cancel" type="button" data-terms-close data-copy="services.termsCancel">
-            Ahora no
-          </button>
-          <button class="terms-dialog__continue" type="button" data-terms-continue disabled data-copy="services.termsContinue">
-            Aceptar y abrir WhatsApp
-          </button>
+          <button class="terms-dialog__cancel" type="button" data-terms-close data-copy="services.termsCancel">Ahora no</button>
+          <button class="terms-dialog__continue" type="button" data-terms-continue disabled data-copy="services.termsContinue">Aceptar y abrir WhatsApp</button>
         </footer>
       </div>
     </dialog>
@@ -771,8 +829,8 @@
       </a>
       <p data-copy="footer.tagline">Ingeniería, educación y tecnología con propósito.</p>
       <nav class="site-footer__legal" aria-label="Información legal y cookies" data-copy="footer.aria" data-copy-attr="aria-label">
-        <a href="./privacidad.html?lang=es" data-legal-link="privacy" data-copy="footer.privacy">Privacidad</a>
-        <a href="./terminos.html?lang=es" data-legal-link="terms" data-copy="footer.terms">Términos</a>
+        <a href="/privacidad?lang=es" data-legal-link="privacy" data-copy="footer.privacy">Privacidad</a>
+        <a href="/terminos?lang=es" data-legal-link="terms" data-copy="footer.terms">Términos</a>
         <button type="button" data-cookie-settings data-copy="cookie.settings">Configuración de cookies</button>
       </nav>
       <a class="footer-top" href="#inicio"><span data-copy="footer.top">Volver arriba</span> <span aria-hidden="true">↑</span></a>
@@ -781,19 +839,13 @@
     <aside class="cookie-banner" data-cookie-banner hidden role="region" aria-labelledby="cookie-title">
       <div class="cookie-banner__copy">
         <h2 id="cookie-title" data-copy="cookie.title">Preferencias de cookies</h2>
-        <p data-copy="cookie.message">
-          Google Analytics solo se activa si aceptas. Tu preferencia se guarda en este dispositivo durante 6 meses.
-        </p>
-        <a href="./privacidad.html?lang=es" data-cookie-policy-link data-copy="cookie.policy">Lee la política de privacidad</a>
+        <p data-copy="cookie.message">Google Analytics solo se activa si aceptas. Tu preferencia se guarda en este dispositivo durante 6 meses.</p>
+        <a href="/privacidad?lang=es" data-cookie-policy-link data-copy="cookie.policy">Lee la política de privacidad</a>
         <p class="cookie-banner__status" data-cookie-status role="status" aria-live="polite" hidden></p>
       </div>
       <div class="cookie-banner__actions">
-        <button class="button button--cookie-accept" type="button" data-cookie-accept data-copy="cookie.accept">
-          Aceptar analítica
-        </button>
-        <button class="button button--cookie-reject" type="button" data-cookie-reject data-copy="cookie.reject">
-          Rechazar analítica
-        </button>
+        <button class="button button--cookie-accept" type="button" data-cookie-accept data-copy="cookie.accept">Aceptar analítica</button>
+        <button class="button button--cookie-reject" type="button" data-cookie-reject data-copy="cookie.reject">Rechazar analítica</button>
       </div>
     </aside>
   </body>
